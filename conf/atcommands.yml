@@ -1179,6 +1179,11 @@ Body:
   - Command: reloadscript
     Help: |
       Reload all scripts.
+  - Command: reloadmonsters
+    Help: |
+      Reload only monster spawns without affecting NPCs, warps, or shops.
+      Preserves quest states and NPC functionality while updating monster data.
+      Supports mode switching between pre-renewal and renewal monster configurations.
   - Command: reloadskilldb
     Help: |
       Reload skills definition database.
