@@ -4417,7 +4417,7 @@ ACMD_FUNC(reloadscriptnomobs){
     flush_fifos();
     map_reloadnpc_nomobs(true); // reload config files without monster spawns
     script_reload();
-    npc_reload();
+    npc_reload_nomobs();
 
     clif_displaymessage(fd, msg_txt(sd,100)); // Scripts have been reloaded.
     clif_displaymessage(fd, "Monster spawns were NOT reloaded.");

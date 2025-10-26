@@ -4274,8 +4274,9 @@ void map_reloadnpc_nomobs(bool clear)
 
 void map_reloadmonsters(bool clear)
 {
-    if (clear)
-        npc_addsrcfile("clear", false); // Clear existing NPCs/monsters
+    (void)clear;
+    // Don't call npc_addsrcfile("clear") because it will remove NPCs/Warps/Shops
+    // Monsters are already cleared by ACMD_FUNC(reloadmonsters) before calling this
 
     // Load common monster spawn files
     npc_addsrcfile("npc/mobs/jail.txt", false);
