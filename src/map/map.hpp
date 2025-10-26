@@ -1199,6 +1199,7 @@ struct mob_data * map_id2boss(int32 id);
 // reload config file looking only for npcs
 void map_reloadnpc(bool clear);
 void map_reloadnpc_nomobs(bool clear);
+void map_reloadmonsters(bool clear);
 
 void map_remove_questinfo(int32 m, struct npc_data *nd);
 

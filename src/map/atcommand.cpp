@@ -4425,6 +4425,39 @@ ACMD_FUNC(reloadscriptnomobs){
     return 0;
 }
 
+ACMD_FUNC(reloadmonsters){
+    nullpo_retr(-1, sd);
+
+    struct s_mapiterator* iter;
+    struct block_list* bl;
+
+    clif_displaymessage(fd, "Clearing all monsters...");
+
+    // Remove all existing monsters
+    iter = mapit_geteachiddb();
+    for( bl = (struct block_list*)mapit_first(iter); mapit_exists(iter); bl = (struct block_list*)mapit_next(iter) ) {
+        if(bl->type == BL_MOB)
+            unit_free(bl, CLR_OUTSIGHT);
+    }
+    mapit_free(iter);
+
+    // Clear mob spawn lookup index
+    mob_clear_spawninfo();
+
+    flush_fifos();
+
+    clif_displaymessage(fd, "Reloading monster spawns...");
+
+    // Reload only monster spawn files
+    map_reloadmonsters(true);
+    npc_reload();
+
+    clif_displaymessage(fd, "Monster spawns have been reloaded.");
+    clif_displaymessage(fd, "Note: Other scripts (NPCs/Warps/Shops) were NOT reloaded.");
+
+    return 0;
+}
+
 ACMD_FUNC(reloadatcommand){
     nullpo_retr(-1, sd);
 
@@ -11535,6 +11568,7 @@ void atcommand_basecommands(void) {
         ACMD_DEF(reloadskilldb),
         ACMD_DEFR(reloadscript, ATCMD_NOSCRIPT),
         ACMD_DEFR(reloadscriptnomobs, ATCMD_NOSCRIPT),
+        ACMD_DEFR(reloadmonsters, ATCMD_NOSCRIPT),
         ACMD_DEF(reloadatcommand),
         ACMD_DEF(reloadbattleconf),
         ACMD_DEF(reloadstatusdb),

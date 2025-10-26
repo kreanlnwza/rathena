@@ -4272,6 +4272,27 @@ void map_reloadnpc_nomobs(bool clear)
     g_reload_skip_monsters = false; // Reset flag
 }
 
+void map_reloadmonsters(bool clear)
+{
+    if (clear)
+        npc_addsrcfile("clear", false); // Clear existing NPCs/monsters
+
+    // Load common monster spawn files
+    npc_addsrcfile("npc/mobs/jail.txt", false);
+    npc_addsrcfile("npc/mobs/pvp.txt", false);
+    npc_addsrcfile("npc/mobs/towns.txt", false);
+
+#ifdef RENEWAL
+    // Load Renewal-specific monster spawns
+    ShowInfo("Loading Renewal monster spawns...\n");
+    map_reloadnpc_sub("npc/re/scripts_monsters.conf");
+#else
+    // Load Pre-Renewal-specific monster spawns
+    ShowInfo("Loading Pre-Renewal monster spawns...\n");
+    map_reloadnpc_sub("npc/pre-re/scripts_monsters.conf");
+#endif
+}
+
 int32 inter_config_read(const char *cfgName)
 {
     char line[1024],w1[1024],w2[1024];

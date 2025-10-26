@@ -6,6 +6,7 @@
 |--------|------|-------|-------|----------|----------|----------|
 | **@reloadscript** | ✅ | ✅ | ✅ | ✅ | ปานกลาง | Reload ทั้งหมด (ปกติ) |
 | **@reloadscriptnomobs** | ✅ | ✅ | ✅ | ❌ | เร็วกว่า | ทดสอบ NPC/Script โดยไม่มี monsters |
+| **@reloadmonsters** | ❌ | ❌ | ❌ | ✅ | เร็วมาก | Reload เฉพาะ monster spawns |
 
 ---
 
@@ -44,6 +45,24 @@
 - Debug warps/shops
 - ต้องการ reload เร็วๆ
 - ไม่ต้องการ monsters มารบกวน
+
+---
+
+### 3. Reload เฉพาะ Monster Spawns (ใหม่!)
+```
+@reloadmonsters
+```
+**ผลลัพธ์:**
+- โหลด NPCs ❌ (ไม่โหลด)
+- โหลด Warps ❌ (ไม่โหลด)
+- โหลด Shops ❌ (ไม่โหลด)
+- โหลด Monster Spawns ✅ (โหลดเฉพาะ monsters)
+
+**ใช้เมื่อ:**
+- แก้ไข monster spawn rates/locations
+- ทดสอบ monster spawn configurations
+- ต้องการ refresh monsters โดยไม่กระทบ NPCs/Scripts อื่นๆ
+- เร็วกว่า @reloadscript มาก
 
 ---
 
