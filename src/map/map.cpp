@@ -4235,7 +4235,6 @@ void map_reloadnpc_sub(const char *cfgName)
         ptr++;
         *ptr = '\0';
 
-        // Skip monster imports if flag is set
         if (g_reload_skip_monsters && strcmpi(w1, "import") == 0 && strstr(w2, "monsters") != nullptr) {
             ShowInfo("Skipping monster import: %s\n", w2);
             continue;
