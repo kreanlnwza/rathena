@@ -1179,6 +1179,11 @@ Body:
   - Command: reloadscript
     Help: |
       Reload all scripts.
+  - Command: reloadscriptnomobs
+    Help: |
+      Reload all scripts without loading monster spawns.
+      Usage: @reloadscriptnomobs
+      Useful for testing NPC/script changes without spawning monsters.
   - Command: reloadskilldb
     Help: |
       Reload skills definition database.
