@@ -5008,6 +5008,8 @@ bool itemdb_reload_file(const char* filepath) {
 
     aFree(buf);
 
+    item_db.loadingFinished();
+
     mob_reload_itemmob_data();
 
     iter = mapit_geteachpc();
