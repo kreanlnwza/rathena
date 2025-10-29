@@ -4337,7 +4337,7 @@ ACMD_FUNC(reloaditemdb){
                 clif_displaymessage(fd, "Failed to reload item database file. Check console for errors.");
                 return -1;
             }
-            sprintf(atcmd_output, "Successfully reloaded item database file: %s", filepath);
+            safesnprintf(atcmd_output, sizeof(atcmd_output), "Successfully reloaded item database file: %s", filepath);
             clif_displaymessage(fd, atcmd_output);
             return 0;
         }
