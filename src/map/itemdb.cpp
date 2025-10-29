@@ -4936,6 +4936,18 @@ bool itemdb_reload_file(const char* filepath) {
         return false;
     }
 
+#ifdef RENEWAL
+    if (strstr(filepath, "/pre-re/") != nullptr || strstr(filepath, "\\pre-re\\") != nullptr) {
+        ShowError("itemdb_reload_file: Cannot reload Pre-Renewal file '%s' on a Renewal server.\n", filepath);
+        return false;
+    }
+#else
+    if (strstr(filepath, "/re/") != nullptr || strstr(filepath, "\\re\\") != nullptr) {
+        ShowError("itemdb_reload_file: Cannot reload Renewal file '%s' on a Pre-Renewal server.\n", filepath);
+        return false;
+    }
+#endif
+
     FILE* f = fopen(filepath, "r");
     if (f == nullptr) {
         ShowError("itemdb_reload_file: Failed to open file '%s'.\n", filepath);
