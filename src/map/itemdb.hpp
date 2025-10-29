@@ -3450,6 +3450,7 @@ public:
 
         this->nameToItemDataMap.clear();
         this->aegisNameToItemDataMap.clear();
+        this->hasPriceValue.clear();
     }
 
     // Additional

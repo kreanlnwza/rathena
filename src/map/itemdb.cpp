@@ -1115,6 +1115,8 @@ uint64 ItemDatabase::parseBodyNode(const ryml::NodeRef& node) {
 }
 
 void ItemDatabase::loadingFinished(){
+    TypesafeCachedYamlDatabase::loadingFinished();
+
     for (auto &tmp_item : item_db) {
         std::shared_ptr<item_data> item = tmp_item.second;
 
@@ -5009,6 +5011,8 @@ bool itemdb_reload_file(const char* filepath) {
     aFree(buf);
 
     item_db.loadingFinished();
+    itemdb_combo.clear();
+    itemdb_combo.load();
 
     mob_reload_itemmob_data();
 
