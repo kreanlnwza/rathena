@@ -1925,6 +1925,10 @@
 	parseable_packet( HEADER_CZ_REQ_STYLE_CHANGE2, sizeof( PACKET_CZ_REQ_STYLE_CHANGE2 ), clif_parse_stylist_buy, 0 );
 #endif
 
+#if PACKETVER >= 20231220
+	parseable_packet( HEADER_CZ_REQ_STYLE_CHANGE3, -1, clif_parse_stylist_buy, 0 );
+#endif
+
 #if PACKETVER_MAIN_NUM >= 20181002 || PACKETVER_RE_NUM >= 20181002 || PACKETVER_ZERO_NUM >= 20181010
 	parseable_packet( HEADER_CZ_USE_SKILL_START, sizeof( struct PACKET_CZ_USE_SKILL_START ), clif_parse_StartUseSkillToId, 0 );
 	parseable_packet( HEADER_CZ_USE_SKILL_END, sizeof( struct PACKET_CZ_USE_SKILL_END ), clif_parse_StopUseSkillToId, 0 );

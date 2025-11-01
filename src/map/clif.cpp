@@ -22923,6 +22923,68 @@ bool clif_parse_stylist_buy_sub( map_session_data* sd, _look look, int16 index )
 }
 
 void clif_parse_stylist_buy( int32 fd, map_session_data* sd ){
+	if( sd == nullptr ){
+		return;
+	}
+#if PACKETVER >= 20231220
+	const PACKET_CZ_REQ_STYLE_CHANGE3* p = reinterpret_cast<PACKET_CZ_REQ_STYLE_CHANGE3*>(RFIFOP(fd, 0));
+
+	for (int i = 0; i < p->count; i++) {
+		if (p->data[i].value == 0)
+			continue;
+
+		switch (p->data[i].action) {
+		case 0:
+			if(!clif_parse_stylist_buy_sub(sd, LOOK_HAIR_COLOR, p->data[i].value)){
+				clif_stylist_response(sd, true);
+				return;
+			}
+			break;
+		case 1:
+			if(!clif_parse_stylist_buy_sub(sd, LOOK_HAIR, p->data[i].value)){
+				clif_stylist_response(sd, true);
+				return;
+			}
+			break;
+		case 2:
+			if(!clif_parse_stylist_buy_sub(sd, LOOK_CLOTHES_COLOR, p->data[i].value)){
+				clif_stylist_response(sd, true);
+				return;
+			}
+			break;
+		case 3:
+			if(!clif_parse_stylist_buy_sub(sd, LOOK_HEAD_TOP, p->data[i].value)){
+				clif_stylist_response(sd, true);
+				return;
+			}
+			break;
+		case 4:
+			if(!clif_parse_stylist_buy_sub(sd, LOOK_HEAD_MID, p->data[i].value)){
+				clif_stylist_response(sd, true);
+				return;
+			}
+			break;
+		case 5:
+			if(!clif_parse_stylist_buy_sub(sd, LOOK_HEAD_BOTTOM, p->data[i].value)){
+				clif_stylist_response(sd, true);
+				return;
+			}
+			break;
+		case 9:
+			if(!clif_parse_stylist_buy_sub(sd, LOOK_BODY2, p->data[i].value)){
+				clif_stylist_response(sd, true);
+				return;
+			}
+			break;
+		default:
+			ShowError("clif_parse_stylist_buy: Unknown action type %d\n", p->data[i].action);
+			clif_stylist_response(sd, true);
+			return;
+		}
+	}
+
+	clif_stylist_response(sd, false);
+#else
 #if PACKETVER >= 20151104
 #if PACKETVER >= 20180516
 	const PACKET_CZ_REQ_STYLE_CHANGE2* p = reinterpret_cast<PACKET_CZ_REQ_STYLE_CHANGE2*>( RFIFOP( fd, 0 ) );
@@ -22973,6 +23035,7 @@ void clif_parse_stylist_buy( int32 fd, map_session_data* sd ){
 #endif
 
 	clif_stylist_response( sd, false );
+#endif
 #endif
 }
 
