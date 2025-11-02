@@ -1,0 +1,129 @@
+//===== rAthena Script =======================================
+//= Example Barter Craft NPC
+//===== Description ==========================================
+//= Demonstrates usage of the BARTER_CRAFT_DB system
+//= This NPC allows players to craft items with success rates
+//===== Additional Comments ==================================
+//= On success: Player receives the crafted item
+//= On failure: Player loses all materials but gets nothing
+//============================================================
+
+prontera,150,180,4 script Crafting Artisan 4_F_EINWOMAN,{
+    mes "[Crafting Artisan]";
+    mes "Hello! I can help you craft special items using various materials.";
+    mes "Please note that crafting has a chance to fail, and you'll lose your materials if it does!";
+    next;
+    
+    switch(select("Learn about crafting", "Start crafting", "Leave")) {
+        case 1:
+            mes "[Crafting Artisan]";
+            mes "The crafting system works like this:";
+            mes "^0000FF1.^000000 You provide the required materials";
+            mes "^0000FF2.^000000 I attempt to craft the item";
+            mes "^0000FF3.^000000 Success: You get your item!";
+            mes "^0000FF4.^000000 Failure: Materials are lost...";
+            next;
+            mes "[Crafting Artisan]";
+            mes "Each recipe has its own success rate:";
+            mes "^FF0000Red Potion: 80% success rate^000000";
+            mes "^FFA500Orange Potion: 50% success rate^000000";
+            mes "^FFD700Yellow Potion: 100% success rate^000000";
+            close;
+            
+        case 2:
+            mes "[Crafting Artisan]";
+            mes "Which item would you like to craft?";
+            next;
+            
+            switch(select("Red Potion (80% - 5 Apple, 3 Jellopy)", 
+                          "Orange Potion (50% - 2 Red Potion, 10 Apple)", 
+                          "Yellow Potion (100% - 2 Orange Potion, 5 Banana)", 
+                          "Cancel")) {
+                case 1:
+                    // Red Potion crafting
+                    if(countitem(512) < 5 || countitem(909) < 3) {
+                        mes "[Crafting Artisan]";
+                        mes "You don't have enough materials!";
+                        mes "I need: ^0000FF5 Apple and 3 Jellopy^000000";
+                        close;
+                    }
+                    mes "[Crafting Artisan]";
+                    mes "Are you sure? This has an ^00FF0080% success rate^000000.";
+                    mes "Materials will be consumed regardless of success!";
+                    next;
+                    if(select("Yes, craft it!", "No, cancel") == 2) close;
+                    
+                    delitem 512, 5; // Apple
+                    delitem 909, 3; // Jellopy
+                    
+                    if(rand(100) < 80) {
+                        mes "[Crafting Artisan]";
+                        mes "^00FF00Success!^000000 Here's your Red Potion!";
+                        getitem 501, 1; // Red Potion
+                    } else {
+                        mes "[Crafting Artisan]";
+                        mes "^FF0000Oh no! The crafting failed...^000000";
+                        mes "Your materials have been lost.";
+                    }
+                    close;
+                    
+                case 2:
+                    // Orange Potion crafting
+                    if(countitem(501) < 2 || countitem(512) < 10) {
+                        mes "[Crafting Artisan]";
+                        mes "You don't have enough materials!";
+                        mes "I need: ^0000FF2 Red Potion and 10 Apple^000000";
+                        close;
+                    }
+                    mes "[Crafting Artisan]";
+                    mes "Are you sure? This has only a ^FF000050% success rate^000000!";
+                    mes "Materials will be consumed regardless of success!";
+                    next;
+                    if(select("Yes, craft it!", "No, cancel") == 2) close;
+                    
+                    delitem 501, 2; // Red Potion
+                    delitem 512, 10; // Apple
+                    
+                    if(rand(100) < 50) {
+                        mes "[Crafting Artisan]";
+                        mes "^00FF00Success!^000000 Here's your Orange Potion!";
+                        getitem 502, 1; // Orange Potion
+                    } else {
+                        mes "[Crafting Artisan]";
+                        mes "^FF0000Oh no! The crafting failed...^000000";
+                        mes "Your materials have been lost.";
+                    }
+                    close;
+                    
+                case 3:
+                    // Yellow Potion crafting
+                    if(countitem(502) < 2 || countitem(513) < 5) {
+                        mes "[Crafting Artisan]";
+                        mes "You don't have enough materials!";
+                        mes "I need: ^0000FF2 Orange Potion and 5 Banana^000000";
+                        close;
+                    }
+                    mes "[Crafting Artisan]";
+                    mes "This has a ^00FF00100% success rate^000000!";
+                    mes "You will definitely get the item.";
+                    next;
+                    if(select("Yes, craft it!", "No, cancel") == 2) close;
+                    
+                    delitem 502, 2; // Orange Potion
+                    delitem 513, 5; // Banana
+                    
+                    mes "[Crafting Artisan]";
+                    mes "^00FF00Success!^000000 Here's your Yellow Potion!";
+                    getitem 503, 1; // Yellow Potion
+                    close;
+                    
+                case 4:
+                    close;
+            }
+            
+        case 3:
+            mes "[Crafting Artisan]";
+            mes "Come back if you need anything crafted!";
+            close;
+    }
+}

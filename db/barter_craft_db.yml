@@ -1,0 +1,68 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2024 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Barter Craft Database
+###########################################################################
+#
+# Barter Craft Settings
+#
+###########################################################################
+# Body:
+#   - Item: Target_Item_Name       Target item to craft (Aegis name)
+#     Rate: 80                      Success rate in percentage (0-100). Default: 100
+#     Cost:                         List of required items (materials)
+#       - Item: Material_Item_Name  Material item (Aegis name)
+#         Amount: 5                 Amount of material. Default: 1
+#
+# Notes:
+#   - Recipe produces 1 item per craft attempt
+#   - On success: Player gets 1 result item
+#   - On failure: Player loses all material items
+###########################################################################
+
+Header:
+  Type: BARTER_CRAFT_DB
+  Version: 1
+
+Body:
+  # Example: Red_Potion with 80% success rate
+  - Item: Red_Potion
+    Rate: 80
+    Cost:
+      - Item: Apple
+        Amount: 5
+      - Item: Jellopy
+        Amount: 3
+
+  # Example: Orange_Potion with 50% success rate
+  - Item: Orange_Potion
+    Rate: 50
+    Cost:
+      - Item: Red_Potion
+        Amount: 2
+      - Item: Apple
+        Amount: 10
+
+  # Example: Yellow_Potion with 100% success rate (always succeeds)
+  - Item: Yellow_Potion
+    Rate: 100
+    Cost:
+      - Item: Orange_Potion
+        Amount: 2
+      - Item: Banana
+        Amount: 5
