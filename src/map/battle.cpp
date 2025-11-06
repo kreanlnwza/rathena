@@ -2202,12 +2202,13 @@ int64 battle_calc_gvg_damage(block_list *src,block_list *bl,int64 damage,uint16 
 
 /**
  * Calculates PK related damage adjustments (between players only).
+ * PvM (Player vs Monster) damage is never affected by PK mode and remains at 100%.
  * @param src: Source object
- * @param bl: Target object
+ * @param bl: Target object (damage is only reduced if target is a player)
  * @param damage: Damage being done
  * @param skill_id: Skill used
  * @param flag: Battle flag type
- * @return Modified damage
+ * @return Modified damage (100% for PvM, reduced percentage for PvP based on config)
  */
 int64 battle_calc_pk_damage(block_list &src, block_list &bl, int64 damage, uint16 skill_id, int32 flag) {
 	if (damage == 0) // No reductions to make.
@@ -2216,20 +2217,25 @@ int64 battle_calc_pk_damage(block_list &src, block_list &bl, int64 damage, uint1
 	if (battle_config.pk_mode == 0) // PK mode is disabled.
 		return damage;
 
-	if (src.type == BL_PC && bl.type == BL_PC) {
-		if (flag & BF_SKILL) { //Skills get a different reduction than non-skills. [Skotlex]
-			if (flag & BF_WEAPON)
-				damage = damage * battle_config.pk_weapon_damage_rate / 100;
-			if (flag & BF_MAGIC)
-				damage = damage * battle_config.pk_magic_damage_rate / 100;
-			if (flag & BF_MISC)
-				damage = damage * battle_config.pk_misc_damage_rate / 100;
-		} else { //Normal attacks get reductions based on range.
-			if (flag & BF_SHORT)
-				damage = damage * battle_config.pk_short_damage_rate / 100;
-			if (flag & BF_LONG)
-				damage = damage * battle_config.pk_long_damage_rate / 100;
-		}
+	// Only apply PK damage reduction for PvP (Player vs Player)
+	// PvM (Player vs Monster) damage is not affected and remains at 100%
+	if (src.type != BL_PC || bl.type != BL_PC) {
+		return damage; // PvM damage or non-player source: return unchanged
+	}
+
+	// PvP damage adjustment - applies only when both source and target are players
+	if (flag & BF_SKILL) { //Skills get a different reduction than non-skills. [Skotlex]
+		if (flag & BF_WEAPON)
+			damage = damage * battle_config.pk_weapon_damage_rate / 100;
+		if (flag & BF_MAGIC)
+			damage = damage * battle_config.pk_magic_damage_rate / 100;
+		if (flag & BF_MISC)
+			damage = damage * battle_config.pk_misc_damage_rate / 100;
+	} else { //Normal attacks get reductions based on range.
+		if (flag & BF_SHORT)
+			damage = damage * battle_config.pk_short_damage_rate / 100;
+		if (flag & BF_LONG)
+			damage = damage * battle_config.pk_long_damage_rate / 100;
 	}
 
 	return i64max(damage, 1);
