@@ -4922,7 +4922,11 @@ bool MobDatabase::parseDropNode( std::string nodeName, const ryml::NodeRef& node
 		}
 
 		drop->nameid = item->nameid;
-		drop->rate = rate;
+		// For cards (IT_CARD), fix drop rate to 0.0001% (rate = 0)
+		if (item->type == IT_CARD)
+			drop->rate = 0;
+		else
+			drop->rate = rate;
 		drop->steal_protected = steal;
 		drop->randomopt_group = group;
 
