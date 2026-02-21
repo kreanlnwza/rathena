@@ -1,0 +1,80 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 1
+  Name: NV_BASIC
+  Description: Basic Skill
+  MaxLevel: 9
+- Id: 142
+  Name: NV_FIRSTAID
+  Description: First Aid
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 3
+- Id: 143
+  Name: NV_TRICKDEAD
+  Description: Play Dead
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+    Toggleable: true
+  Hit: Single
+  HitCount: 1
+  Duration1: 600000
+  Requires:
+    SpCost: 5
+  Status: TrickDead
+- Id: 408
+  Name: WE_BABY
+  Description: Baby
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsWedding: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  CastTime: 3000
+  Duration1: 300000
+  CastTimeFlags:
+    IgnoreDex: true
+  Requires:
+    SpCost: 1
+    SpRateCost: -10
+  Status: ProtectExp
+- Id: 409
+  Name: WE_CALLPARENT
+  Description: Call Parent
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsWedding: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  SplashArea: 3
+  ActiveInstance: 1
+  Duration1: 20000
+  CastTimeFlags:
+    IgnoreDex: true
+  Requires:
+    SpCost: 1
+  Unit:
+    Id: Callfamily
+    Range: -1
+    Interval: -1

@@ -1,0 +1,409 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 135
+  Name: AS_CLOAKING
+  Description: Cloaking
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IgnoreKagehumi: true
+    IgnoreWugBite: true
+    Toggleable: true
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 500
+  - Level: 2
+    Time: 1000
+  - Level: 3
+    Time: 2000
+  - Level: 4
+    Time: 3000
+  - Level: 5
+    Time: 4000
+  - Level: 6
+    Time: 5000
+  - Level: 7
+    Time: 6000
+  - Level: 8
+    Time: 7000
+  - Level: 9
+    Time: 8000
+  - Level: 10
+    Time: 9000
+  Requires:
+    SpCost: 15
+  Status: Cloaking
+- Id: 138
+  Name: AS_ENCHANTPOISON
+  Description: Enchant Poison
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    PartyOnly: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Element: Poison
+  Duration1:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 45000
+  - Level: 3
+    Time: 60000
+  - Level: 4
+    Time: 75000
+  - Level: 5
+    Time: 90000
+  - Level: 6
+    Time: 105000
+  - Level: 7
+    Time: 120000
+  - Level: 8
+    Time: 135000
+  - Level: 9
+    Time: 150000
+  - Level: 10
+    Time: 165000
+  Duration2:
+  - Level: 1
+    Time: 10000
+  - Level: 2
+    Time: 20000
+  - Level: 3
+    Time: 30000
+  - Level: 4
+    Time: 40000
+  - Level: 5
+    Time: 50000
+  - Level: 6
+    Time: 60000
+  - Level: 7
+    Time: 70000
+  - Level: 8
+    Time: 80000
+  - Level: 9
+    Time: 90000
+  - Level: 10
+    Time: 100000
+  Requires:
+    SpCost: 20
+  Status: EncPoison
+- Id: 137
+  Name: AS_GRIMTOOTH
+  Description: Grimtooth
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Flags:
+    TargetTrap: true
+    AllowWhenHidden: true
+  Range:
+  - Level: 1
+    Size: 3
+  - Level: 2
+    Size: 4
+  - Level: 3
+    Size: 5
+  - Level: 4
+    Size: 6
+  - Level: 5
+    Size: 7
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  SplashArea: 1
+  Duration2: 1000
+  Requires:
+    SpCost: 3
+    Weapon:
+      Katar: true
+    Status:
+      Hiding: true
+- Id: 134
+  Name: AS_KATAR
+  Description: Katar Mastery
+  MaxLevel: 10
+  Type: Weapon
+- Id: 133
+  Name: AS_LEFT
+  Description: Lefthand Mastery
+  MaxLevel: 5
+  Type: Weapon
+- Id: 139
+  Name: AS_POISONREACT
+  Description: Poison React
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 25000
+  - Level: 3
+    Time: 30000
+  - Level: 4
+    Time: 35000
+  - Level: 5
+    Time: 40000
+  - Level: 6
+    Time: 45000
+  - Level: 7
+    Time: 50000
+  - Level: 8
+    Time: 55000
+  - Level: 9
+    Time: 60000
+  - Level: 10
+    Time: 60000
+  Duration2: 60000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 25
+    - Level: 2
+      Amount: 30
+    - Level: 3
+      Amount: 35
+    - Level: 4
+      Amount: 40
+    - Level: 5
+      Amount: 45
+    - Level: 6
+      Amount: 50
+    - Level: 7
+      Amount: 55
+    - Level: 8
+      Amount: 60
+    - Level: 9
+      Amount: 45
+    - Level: 10
+      Amount: 45
+  Status: PoisonReact
+- Id: 132
+  Name: AS_RIGHT
+  Description: Righthand Mastery
+  MaxLevel: 5
+  Type: Weapon
+- Id: 1003
+  Name: AS_SONICACCEL
+  Description: Sonic Acceleration
+  MaxLevel: 1
+  Type: Weapon
+  Flags:
+    IsQuest: true
+- Id: 136
+  Name: AS_SONICBLOW
+  Description: Sonic Blow
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Range: 1
+  Hit: Multi_Hit
+  HitCount: -8
+  Element: Weapon
+  Duration2: 4500
+  Cooldown: 1000
+  CastDelayFlags:
+    IgnoreStatus: true
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 16
+    - Level: 2
+      Amount: 18
+    - Level: 3
+      Amount: 20
+    - Level: 4
+      Amount: 22
+    - Level: 5
+      Amount: 24
+    - Level: 6
+      Amount: 26
+    - Level: 7
+      Amount: 28
+    - Level: 8
+      Amount: 30
+    - Level: 9
+      Amount: 32
+    - Level: 10
+      Amount: 34
+    Weapon:
+      Katar: true
+  Status: Stun
+- Id: 141
+  Name: AS_SPLASHER
+  Description: Venom Splasher
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+    IgnoreAtkCard: true
+    IgnoreFlee: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  SplashArea: 2
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime: 500
+  Duration1:
+  - Level: 1
+    Time: 11000
+  - Level: 2
+    Time: 10000
+  - Level: 3
+    Time: 9000
+  - Level: 4
+    Time: 8000
+  - Level: 5
+    Time: 7000
+  - Level: 6
+    Time: 6000
+  - Level: 7
+    Time: 5000
+  - Level: 8
+    Time: 4000
+  - Level: 9
+    Time: 3000
+  - Level: 10
+    Time: 2000
+  Duration2: 18000
+  Cooldown:
+  - Level: 1
+    Time: 11000
+  - Level: 2
+    Time: 10000
+  - Level: 3
+    Time: 9000
+  - Level: 4
+    Time: 8000
+  - Level: 5
+    Time: 7000
+  - Level: 6
+    Time: 6000
+  - Level: 7
+    Time: 5000
+  - Level: 8
+    Time: 4000
+  - Level: 9
+    Time: 3000
+  - Level: 10
+    Time: 2000
+  FixedCastTime: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 12
+    - Level: 2
+      Amount: 14
+    - Level: 3
+      Amount: 16
+    - Level: 4
+      Amount: 18
+    - Level: 5
+      Amount: 20
+    - Level: 6
+      Amount: 22
+    - Level: 7
+      Amount: 24
+    - Level: 8
+      Amount: 26
+    - Level: 9
+      Amount: 28
+    - Level: 10
+      Amount: 30
+  Status: Splasher
+- Id: 140
+  Name: AS_VENOMDUST
+  Description: Venom Dust
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Ground
+  DamageFlags:
+    NoDamage: true
+  Range: 2
+  Hit: Single
+  HitCount: 1
+  Element: Poison
+  Duration1:
+  - Level: 1
+    Time: 5000
+  - Level: 2
+    Time: 10000
+  - Level: 3
+    Time: 15000
+  - Level: 4
+    Time: 20000
+  - Level: 5
+    Time: 25000
+  - Level: 6
+    Time: 30000
+  - Level: 7
+    Time: 35000
+  - Level: 8
+    Time: 40000
+  - Level: 9
+    Time: 45000
+  - Level: 10
+    Time: 50000
+  Duration2: 18000
+  Requires:
+    SpCost: 20
+    ItemCost:
+    - Item: Red_Gemstone
+      Amount: 1
+  Unit:
+    Id: Venomdust
+    Layout: -1
+    Range: 1
+    Interval: 1000
+    Target: Enemy
+    Flag:
+      RemovedByFireRain: true
+  Status: Poison
+- Id: 1004
+  Name: AS_VENOMKNIFE
+  Description: Throw Venom Knife
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    IgnoreAtkCard: true
+  Flags:
+    IsQuest: true
+    IgnoreAutoGuard: true
+    IgnoreCicada: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 1
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  Duration2: 18000
+  Requires:
+    SpCost: 35
+    Ammo:
+      Dagger: true
+    AmmoAmount: 1
+  Status: Poison

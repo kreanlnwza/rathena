@@ -1,0 +1,224 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 387
+  Name: WS_CARTBOOST
+  Description: Cart Boost
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  Duration1: 60000
+  Requires:
+    SpCost: 20
+    State: Cart
+  Status: CartBoost
+- Id: 485
+  Name: WS_CARTTERMINATION
+  Description: Cart Termination
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Flags:
+    AllowOnMado: true
+  Range: -2
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  Duration2: 4500
+  Requires:
+    SpCost: 15
+    ZenyCost:
+    - Level: 1
+      Amount: 600
+    - Level: 2
+      Amount: 700
+    - Level: 3
+      Amount: 800
+    - Level: 4
+      Amount: 900
+    - Level: 5
+      Amount: 1000
+    - Level: 6
+      Amount: 1100
+    - Level: 7
+      Amount: 1200
+    - Level: 8
+      Amount: 1300
+    - Level: 9
+      Amount: 1400
+    - Level: 10
+      Amount: 1500
+    Weapon:
+      Fist: true
+      Dagger: true
+      1hSword: true
+      2hSword: true
+      1hSpear: true
+      2hSpear: true
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+      2hMace: true
+      Staff: true
+      Knuckle: true
+      Musical: true
+      Whip: true
+      Book: true
+      Katar: true
+      Revolver: true
+      Rifle: true
+      Gatling: true
+      Shotgun: true
+      Grenade: true
+      Huuma: true
+    Status:
+      Cartboost: true
+  Status: Stun
+- Id: 384
+  Name: WS_MELTDOWN
+  Description: Shattering Strike
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 15000
+  - Level: 2
+    Time: 20000
+  - Level: 3
+    Time: 25000
+  - Level: 4
+    Time: 30000
+  - Level: 5
+    Time: 35000
+  - Level: 6
+    Time: 40000
+  - Level: 7
+    Time: 45000
+  - Level: 8
+    Time: 50000
+  - Level: 9
+    Time: 55000
+  - Level: 10
+    Time: 60000
+  Duration2: 5000
+  FixedCastTime:
+  - Level: 1
+    Time: 5
+  - Level: 2
+    Time: 5
+  - Level: 3
+    Time: 6
+  - Level: 4
+    Time: 6
+  - Level: 5
+    Time: 7
+  - Level: 6
+    Time: 7
+  - Level: 7
+    Time: 8
+  - Level: 8
+    Time: 8
+  - Level: 9
+    Time: 9
+  - Level: 10
+    Time: 10
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 50
+    - Level: 2
+      Amount: 50
+    - Level: 3
+      Amount: 60
+    - Level: 4
+      Amount: 60
+    - Level: 5
+      Amount: 70
+    - Level: 6
+      Amount: 70
+    - Level: 7
+      Amount: 80
+    - Level: 8
+      Amount: 80
+    - Level: 9
+      Amount: 90
+    - Level: 10
+      Amount: 90
+  Status: Meltdown
+- Id: 486
+  Name: WS_OVERTHRUSTMAX
+  Description: Maximum Power Thrust
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  Duration1: 180000
+  Requires:
+    SpCost: 15
+    ZenyCost:
+    - Level: 1
+      Amount: 3000
+    - Level: 2
+      Amount: 3500
+    - Level: 3
+      Amount: 4000
+    - Level: 4
+      Amount: 4500
+    - Level: 5
+      Amount: 5000
+    Weapon:
+      Fist: true
+      Dagger: true
+      1hSword: true
+      2hSword: true
+      1hSpear: true
+      2hSpear: true
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+      2hMace: true
+      Staff: true
+      Knuckle: true
+      Musical: true
+      Whip: true
+      Book: true
+      Katar: true
+      Revolver: true
+      Rifle: true
+      Gatling: true
+      Shotgun: true
+      Grenade: true
+      Huuma: true
+  Status: MaxOverThrust
+- Id: 477
+  Name: WS_WEAPONREFINE
+  Description: Upgrade Weapon
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 30

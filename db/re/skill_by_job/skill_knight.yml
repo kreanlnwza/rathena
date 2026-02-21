@@ -1,0 +1,315 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 61
+  Name: KN_AUTOCOUNTER
+  Description: Counter Attack
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    Critical: true
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  Duration1:
+  - Level: 1
+    Time: 400
+  - Level: 2
+    Time: 800
+  - Level: 3
+    Time: 1200
+  - Level: 4
+    Time: 1600
+  - Level: 5
+    Time: 2000
+  Requires:
+    SpCost: 3
+    Weapon:
+      Fist: true
+      Dagger: true
+      1hSword: true
+      2hSword: true
+      1hSpear: true
+      2hSpear: true
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+      2hMace: true
+      Staff: true
+      Knuckle: true
+      Musical: true
+      Whip: true
+      Book: true
+      Katar: true
+      Revolver: true
+      Rifle: true
+      Gatling: true
+      Shotgun: true
+      Grenade: true
+      Huuma: true
+  Status: AutoCounter
+- Id: 62
+  Name: KN_BOWLINGBASH
+  Description: Bowling Bash
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Flags:
+    TargetTrap: true
+  Range: -2
+  Hit: Single
+  HitCount: 2
+  Element: Weapon
+  SplashArea: 2
+  Knockback:
+  - Level: 1
+    Amount: 1
+  - Level: 2
+    Amount: 1
+  - Level: 3
+    Amount: 2
+  - Level: 4
+    Amount: 2
+  - Level: 5
+    Amount: 3
+  - Level: 6
+    Amount: 3
+  - Level: 7
+    Amount: 4
+  - Level: 8
+    Amount: 4
+  - Level: 9
+    Amount: 5
+  - Level: 10
+    Amount: 5
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  AfterCastActDelay: 300
+  Duration1: 1000
+  Cooldown: 1000
+  FixedCastTime: 350
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 13
+    - Level: 2
+      Amount: 14
+    - Level: 3
+      Amount: 15
+    - Level: 4
+      Amount: 16
+    - Level: 5
+      Amount: 17
+    - Level: 6
+      Amount: 18
+    - Level: 7
+      Amount: 19
+    - Level: 8
+      Amount: 20
+    - Level: 9
+      Amount: 21
+    - Level: 10
+      Amount: 22
+  CastCancel: false
+- Id: 57
+  Name: KN_BRANDISHSPEAR
+  Description: Brandish Spear
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Range: -2
+  Hit: Multi_Hit
+  HitCount: -3
+  Element: Weapon
+  SplashArea: 2
+  ActiveInstance: 5
+  Knockback: 2
+  AfterCastActDelay: 500
+  Duration1: 1000
+  Cooldown: 1000
+  FixedCastTime: 350
+  Requires:
+    SpCost: 24
+    Weapon:
+      1hSpear: true
+      2hSpear: true
+    State: Riding
+  CastCancel: false
+- Id: 64
+  Name: KN_CAVALIERMASTERY
+  Description: Cavalier Mastery
+  MaxLevel: 5
+  Type: Weapon
+- Id: 1001
+  Name: KN_CHARGEATK
+  Description: Charge Attack
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Attack
+  Flags:
+    IsQuest: true
+  Range: 14
+  Hit: Single
+  HitCount: 1
+  Knockback: 2
+  Element: Weapon
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  Cooldown: 500
+  Requires:
+    SpCost: 40
+- Id: 495
+  Name: KN_ONEHAND
+  Description: Onehand Quicken
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsSpirit: true
+  Hit: Single
+  HitCount: 1
+  Duration1: 300000
+  Requires:
+    SpCost: 100
+    Weapon:
+      1hSword: true
+  Status: OneHand
+- Id: 56
+  Name: KN_PIERCE
+  Description: Pierce
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Range: -2
+  Hit: Multi_Hit
+  HitCount: 3
+  Element: Weapon
+  Requires:
+    SpCost: 7
+    Weapon:
+      1hSpear: true
+      2hSpear: true
+- Id: 63
+  Name: KN_RIDING
+  Description: Peco Peco Riding
+  MaxLevel: 1
+  Type: Weapon
+- Id: 59
+  Name: KN_SPEARBOOMERANG
+  Description: Spear Boomerang
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  Range:
+  - Level: 1
+    Size: 3
+  - Level: 2
+    Size: 5
+  - Level: 3
+    Size: 7
+  - Level: 4
+    Size: 9
+  - Level: 5
+    Size: 11
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  AfterCastActDelay: 1000
+  Requires:
+    SpCost: 10
+    Weapon:
+      1hSpear: true
+      2hSpear: true
+- Id: 55
+  Name: KN_SPEARMASTERY
+  Description: Spear Mastery
+  MaxLevel: 10
+  Type: Weapon
+- Id: 58
+  Name: KN_SPEARSTAB
+  Description: Spear Stab
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Flags:
+    TargetTrap: true
+  Range: -4
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  Knockback: 6
+  Requires:
+    SpCost: 9
+    Weapon:
+      1hSpear: true
+      2hSpear: true
+- Id: 60
+  Name: KN_TWOHANDQUICKEN
+  Description: Twohand Quicken
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 60000
+  - Level: 3
+    Time: 90000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 150000
+  - Level: 6
+    Time: 180000
+  - Level: 7
+    Time: 210000
+  - Level: 8
+    Time: 240000
+  - Level: 9
+    Time: 270000
+  - Level: 10
+    Time: 300000
+  - Level: 11
+    Time: 300000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 14
+    - Level: 2
+      Amount: 18
+    - Level: 3
+      Amount: 22
+    - Level: 4
+      Amount: 26
+    - Level: 5
+      Amount: 30
+    - Level: 6
+      Amount: 34
+    - Level: 7
+      Amount: 38
+    - Level: 8
+      Amount: 42
+    - Level: 9
+      Amount: 46
+    - Level: 10
+      Amount: 50
+    Weapon:
+      2hSword: true
+  Status: TwoHandQuicken

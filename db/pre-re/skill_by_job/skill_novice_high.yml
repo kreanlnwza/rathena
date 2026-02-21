@@ -1,0 +1,20 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 143
+  Name: NV_TRICKDEAD
+  Description: Play Dead
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+    Toggleable: true
+  Hit: Single
+  HitCount: 1
+  Duration1: 600000
+  Requires:
+    SpCost: 5
+  Status: TrickDead

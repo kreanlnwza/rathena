@@ -1,0 +1,141 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 372
+  Name: CH_CHAINCRUSH
+  Description: Chain Crush Combo
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  Flags:
+    NoTargetSelf: true
+  Range: -2
+  Hit: Multi_Hit
+  HitCount:
+  - Level: 1
+    Count: -1
+  - Level: 2
+    Count: -1
+  - Level: 3
+    Count: -2
+  - Level: 4
+    Count: -2
+  - Level: 5
+    Count: -3
+  - Level: 6
+    Count: -3
+  - Level: 7
+    Count: -4
+  - Level: 8
+    Count: -4
+  - Level: 9
+    Count: -5
+  - Level: 10
+    Count: -5
+  Element: Weapon
+  CastDelayFlags:
+    IgnoreStatus: true
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 4
+    - Level: 2
+      Amount: 6
+    - Level: 3
+      Amount: 8
+    - Level: 4
+      Amount: 10
+    - Level: 5
+      Amount: 12
+    - Level: 6
+      Amount: 14
+    - Level: 7
+      Amount: 16
+    - Level: 8
+      Amount: 18
+    - Level: 9
+      Amount: 20
+    - Level: 10
+      Amount: 22
+    SpiritSphereCost: 2
+- Id: 370
+  Name: CH_PALMSTRIKE
+  Description: Raging Palm Strike
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  Range: -2
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  Knockback: 3
+  AfterCastActDelay: 300
+  CastTimeFlags:
+    IgnoreDex: true
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 2
+    - Level: 2
+      Amount: 4
+    - Level: 3
+      Amount: 6
+    - Level: 4
+      Amount: 8
+    - Level: 5
+      Amount: 10
+    Status:
+      Explosionspirits: true
+- Id: 401
+  Name: CH_SOULCOLLECT
+  Description: Zen
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime: 2000
+  Duration1: 600000
+  Requires:
+    SpCost: 20
+- Id: 371
+  Name: CH_TIGERFIST
+  Description: Glacier Fist
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  Flags:
+    NoTargetSelf: true
+  Range: -2
+  Hit: Multi_Hit
+  HitCount: 1
+  Element: Weapon
+  Duration1:
+  - Level: 1
+    Time: 2000
+  - Level: 2
+    Time: 4000
+  - Level: 3
+    Time: 6000
+  - Level: 4
+    Time: 8000
+  - Level: 5
+    Time: 10000
+  CastDelayFlags:
+    IgnoreStatus: true
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 4
+    - Level: 2
+      Amount: 6
+    - Level: 3
+      Amount: 8
+    - Level: 4
+      Amount: 10
+    - Level: 5
+      Amount: 12
+    SpiritSphereCost: 1
+  Status: Ankle

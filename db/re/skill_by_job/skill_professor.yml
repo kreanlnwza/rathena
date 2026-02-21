@@ -1,0 +1,212 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 482
+  Name: PF_DOUBLECASTING
+  Description: Double Casting
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime: 1600
+  Duration1: 90000
+  FixedCastTime: 400
+  CastTimeFlags:
+    IgnoreDex: true
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 40
+    - Level: 2
+      Amount: 45
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 55
+    - Level: 5
+      Amount: 60
+  Status: DoubleCast
+- Id: 404
+  Name: PF_FOGWALL
+  Description: Blinding Mist
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Ground
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    TargetSelf: true
+    TargetHidden: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Earth
+  ActiveInstance: 2
+  Duration1: 20000
+  Duration2: 10000
+  Requires:
+    SpCost: 25
+  Unit:
+    Id: Fogwall
+    Layout: -1
+    Interval: -1
+    Flag:
+      RemovedByFireRain: true
+  Status: FogWall
+- Id: 373
+  Name: PF_HPCONVERSION
+  Description: Indulge
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  AfterCastActDelay: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 1
+    - Level: 2
+      Amount: 2
+    - Level: 3
+      Amount: 3
+    - Level: 4
+      Amount: 4
+    - Level: 5
+      Amount: 5
+- Id: 403
+  Name: PF_MEMORIZE
+  Description: Foresight
+  MaxLevel: 1
+  Type: Magic
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  HitCount: 1
+  FixedCastTime: 2500
+  CastTimeFlags:
+    IgnoreDex: true
+    IgnoreStatus: true
+  Requires:
+    SpCost: 1
+  Status: Memorize
+- Id: 402
+  Name: PF_MINDBREAKER
+  Description: Mind Breaker
+  MaxLevel: 5
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  AfterCastActDelay:
+  - Level: 1
+    Time: 800
+  - Level: 2
+    Time: 900
+  - Level: 3
+    Time: 1000
+  - Level: 4
+    Time: 1100
+  - Level: 5
+    Time: 1200
+  Duration1: 30000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 12
+    - Level: 2
+      Amount: 15
+    - Level: 3
+      Amount: 18
+    - Level: 4
+      Amount: 21
+    - Level: 5
+      Amount: 24
+  Status: MindBreaker
+- Id: 375
+  Name: PF_SOULBURN
+  Description: Soul Siphon
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Attack
+  DamageFlags:
+    IgnoreAtkCard: true
+    IgnoreElement: true
+    IgnoreDefCard: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Cooldown:
+  - Level: 1
+    Time: 10000
+  - Level: 2
+    Time: 10000
+  - Level: 3
+    Time: 10000
+  - Level: 4
+    Time: 10000
+  - Level: 5
+    Time: 15000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 80
+    - Level: 2
+      Amount: 90
+    - Level: 3
+      Amount: 100
+    - Level: 4
+      Amount: 110
+    - Level: 5
+      Amount: 120
+- Id: 374
+  Name: PF_SOULCHANGE
+  Description: Soul Exhale
+  MaxLevel: 1
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    NoTargetSelf: true
+    PartyOnly: true
+    GuildOnly: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  FixedCastTime: 3000
+  Requires:
+    SpCost: 5
+- Id: 405
+  Name: PF_SPIDERWEB
+  Description: Fiber Lock
+  MaxLevel: 1
+  Type: Magic
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  ActiveInstance: 3
+  Duration1: 16000
+  Duration2: 8000
+  Requires:
+    SpCost: 30
+    ItemCost:
+    - Item: Spiderweb
+      Amount: 1
+  Unit:
+    Id: Spiderweb
+    Interval: -1
+    Target: Enemy
+    Flag:
+      RemovedByFireRain: true
+  Status: SpiderWeb

@@ -1,0 +1,362 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 111
+  Name: BS_ADRENALINE
+  Description: Adrenaline Rush
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  SplashArea: -1
+  Duration1:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 60000
+  - Level: 3
+    Time: 90000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 150000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 20
+    - Level: 2
+      Amount: 23
+    - Level: 3
+      Amount: 26
+    - Level: 4
+      Amount: 29
+    - Level: 5
+      Amount: 32
+    Weapon:
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+  Status: Adrenaline
+- Id: 459
+  Name: BS_ADRENALINE2
+  Description: Advanced Adrenaline Rush
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    IsSpirit: true
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  SplashArea: -1
+  Duration1: 150000
+  Requires:
+    SpCost: 64
+    Weapon:
+      Fist: true
+      Dagger: true
+      1hSword: true
+      2hSword: true
+      1hSpear: true
+      2hSpear: true
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+      2hMace: true
+      Staff: true
+      Knuckle: true
+      Musical: true
+      Whip: true
+      Book: true
+      Katar: true
+  Status: Adrenaline2
+- Id: 101
+  Name: BS_AXE
+  Description: Smith Axe
+  MaxLevel: 3
+  Type: Weapon
+- Id: 98
+  Name: BS_DAGGER
+  Description: Smith Dagger
+  MaxLevel: 3
+  Type: Weapon
+- Id: 96
+  Name: BS_ENCHANTEDSTONE
+  Description: Enchanted Stone Craft
+  MaxLevel: 5
+  Type: Weapon
+- Id: 106
+  Name: BS_FINDINGORE
+  Description: Ore Discovery
+  MaxLevel: 1
+  Type: Weapon
+- Id: 1013
+  Name: BS_GREED
+  Description: Greed
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    IsQuest: true
+    AllowOnWarg: true
+    AllowOnMado: true
+  Hit: Single
+  SplashArea: 2
+  AfterCastActDelay: 1000
+  Requires:
+    SpCost: 10
+- Id: 110
+  Name: BS_HAMMERFALL
+  Description: Hammer Fall
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Ground
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    AllowOnMado: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 2
+  - Level: 6
+    Area: 12
+  Duration2: 5000
+  Requires:
+    SpCost: 10
+    Weapon:
+      Dagger: true
+      1hSword: true
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+  Status: Stun
+- Id: 105
+  Name: BS_HILTBINDING
+  Description: Hilt Binding
+  MaxLevel: 1
+  Type: Weapon
+- Id: 94
+  Name: BS_IRON
+  Description: Iron Tempering
+  MaxLevel: 5
+  Type: Weapon
+- Id: 103
+  Name: BS_KNUCKLE
+  Description: Smith Knucklebrace
+  MaxLevel: 3
+  Type: Weapon
+- Id: 102
+  Name: BS_MACE
+  Description: Smith Mace
+  MaxLevel: 3
+  Type: Weapon
+- Id: 114
+  Name: BS_MAXIMIZE
+  Description: Maximize Power
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+    Toggleable: true
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 1000
+  - Level: 2
+    Time: 2000
+  - Level: 3
+    Time: 3000
+  - Level: 4
+    Time: 4000
+  - Level: 5
+    Time: 5000
+  Requires:
+    SpCost: 10
+  Status: MaximizePower
+- Id: 97
+  Name: BS_ORIDEOCON
+  Description: Oridecon Research
+  MaxLevel: 5
+  Type: Weapon
+- Id: 113
+  Name: BS_OVERTHRUST
+  Description: Power-Thrust
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  SplashArea: -1
+  Duration1:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 40000
+  - Level: 3
+    Time: 60000
+  - Level: 4
+    Time: 80000
+  - Level: 5
+    Time: 100000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 18
+    - Level: 2
+      Amount: 16
+    - Level: 3
+      Amount: 14
+    - Level: 4
+      Amount: 12
+    - Level: 5
+      Amount: 10
+    Weapon:
+      Dagger: true
+      1hSword: true
+      2hSword: true
+      1hSpear: true
+      2hSpear: true
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+      2hMace: true
+      Staff: true
+      Bow: true
+      Knuckle: true
+      Musical: true
+      Whip: true
+      Book: true
+      Katar: true
+      Revolver: true
+      Rifle: true
+      Gatling: true
+      Shotgun: true
+      Grenade: true
+      Huuma: true
+      2hStaff: true
+  Status: Overthrust
+- Id: 108
+  Name: BS_REPAIRWEAPON
+  Description: Weapon Repair
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Range: 2
+  Hit: Single
+  HitCount: 1
+  CastTime: 7500
+  Requires:
+    SpCost: 30
+- Id: 109
+  Name: BS_SKINTEMPER
+  Description: Skin Tempering
+  MaxLevel: 5
+  Type: Weapon
+- Id: 104
+  Name: BS_SPEAR
+  Description: Smith Spear
+  MaxLevel: 3
+  Type: Weapon
+- Id: 95
+  Name: BS_STEEL
+  Description: Steel Tempering
+  MaxLevel: 5
+  Type: Weapon
+- Id: 99
+  Name: BS_SWORD
+  Description: Smith Sword
+  MaxLevel: 3
+  Type: Weapon
+- Id: 100
+  Name: BS_TWOHANDSWORD
+  Description: Smith Two-handed Sword
+  MaxLevel: 3
+  Type: Weapon
+- Id: 1012
+  Name: BS_UNFAIRLYTRICK
+  Description: Unfair Trick
+  MaxLevel: 1
+  Type: Weapon
+  Flags:
+    IsQuest: true
+- Id: 112
+  Name: BS_WEAPONPERFECT
+  Description: Weapon Perfection
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  SplashArea: -1
+  Duration1:
+  - Level: 1
+    Time: 10000
+  - Level: 2
+    Time: 20000
+  - Level: 3
+    Time: 30000
+  - Level: 4
+    Time: 40000
+  - Level: 5
+    Time: 50000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 18
+    - Level: 2
+      Amount: 16
+    - Level: 3
+      Amount: 14
+    - Level: 4
+      Amount: 12
+    - Level: 5
+      Amount: 10
+  Status: WeaponPerfection
+- Id: 107
+  Name: BS_WEAPONRESEARCH
+  Description: Weaponry Research
+  MaxLevel: 10
+  Type: Weapon
