@@ -1,0 +1,1200 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 536
+  Name: NJ_BAKUENRYU
+  Description: Raging Fire Dragon
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Attack
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: -3
+  Element: Fire
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime: 2000
+  AfterCastActDelay: 500
+  Duration1: 100
+  Cooldown: 300
+  FixedCastTime: 800
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 20
+    - Level: 2
+      Amount: 25
+    - Level: 3
+      Amount: 30
+    - Level: 4
+      Amount: 35
+    - Level: 5
+      Amount: 40
+    ItemCost:
+    - Item: Flame_Stone
+      Amount: 1
+  Unit:
+    Id: Dummyskill
+    Layout: 2
+    Interval: 1000
+    Target: Enemy
+    Flag:
+      PathCheck: true
+- Id: 532
+  Name: NJ_BUNSINJYUTSU
+  Description: Mirror Image
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime:
+  - Level: 1
+    Time: 3200
+  - Level: 2
+    Time: 2800
+  - Level: 3
+    Time: 2400
+  - Level: 4
+    Time: 2000
+  - Level: 5
+    Time: 1600
+  - Level: 6
+    Time: 1200
+  - Level: 7
+    Time: 800
+  - Level: 8
+    Time: 800
+  - Level: 9
+    Time: 800
+  - Level: 10
+    Time: 800
+  AfterCastActDelay: 1000
+  Duration1:
+  - Level: 1
+    Time: 60000
+  - Level: 2
+    Time: 80000
+  - Level: 3
+    Time: 100000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 140000
+  - Level: 6
+    Time: 160000
+  - Level: 7
+    Time: 180000
+  - Level: 8
+    Time: 200000
+  - Level: 9
+    Time: 220000
+  - Level: 10
+    Time: 240000
+  FixedCastTime:
+  - Level: 1
+    Time: 800
+  - Level: 2
+    Time: 700
+  - Level: 3
+    Time: 600
+  - Level: 4
+    Time: 500
+  - Level: 5
+    Time: 400
+  - Level: 6
+    Time: 300
+  - Level: 7
+    Time: 200
+  - Level: 8
+    Time: 200
+  - Level: 9
+    Time: 200
+  - Level: 10
+    Time: 200
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 32
+    - Level: 3
+      Amount: 34
+    - Level: 4
+      Amount: 36
+    - Level: 5
+      Amount: 38
+    - Level: 6
+      Amount: 40
+    - Level: 7
+      Amount: 42
+    - Level: 8
+      Amount: 44
+    - Level: 9
+      Amount: 46
+    - Level: 10
+      Amount: 48
+    ItemCost:
+    - Item: Shadow_Orb
+      Amount: 1
+  Status: Bunsinjyutsu
+- Id: 540
+  Name: NJ_HUUJIN
+  Description: Wind Blade
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Attack
+  Range: 9
+  Hit: Multi_Hit
+  HitCount:
+  - Level: 1
+    Count: 1
+  - Level: 2
+    Count: 2
+  - Level: 3
+    Count: 2
+  - Level: 4
+    Count: 3
+  - Level: 5
+    Count: 3
+  - Level: 6
+    Count: 4
+  - Level: 7
+    Count: 4
+  - Level: 8
+    Count: 5
+  - Level: 9
+    Count: 5
+  - Level: 10
+    Count: 6
+  Element: Wind
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime:
+  - Level: 1
+    Time: 800
+  - Level: 2
+    Time: 1200
+  - Level: 3
+    Time: 1600
+  - Level: 4
+    Time: 2000
+  - Level: 5
+    Time: 2400
+  - Level: 6
+    Time: 2800
+  - Level: 7
+    Time: 3200
+  - Level: 8
+    Time: 3600
+  - Level: 9
+    Time: 4000
+  - Level: 10
+    Time: 4400
+  FixedCastTime:
+  - Level: 1
+    Time: 200
+  - Level: 2
+    Time: 300
+  - Level: 3
+    Time: 400
+  - Level: 4
+    Time: 500
+  - Level: 5
+    Time: 600
+  - Level: 6
+    Time: 700
+  - Level: 7
+    Time: 800
+  - Level: 8
+    Time: 900
+  - Level: 9
+    Time: 1000
+  - Level: 10
+    Time: 1100
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 12
+    - Level: 2
+      Amount: 14
+    - Level: 3
+      Amount: 16
+    - Level: 4
+      Amount: 18
+    - Level: 5
+      Amount: 20
+    - Level: 6
+      Amount: 22
+    - Level: 7
+      Amount: 24
+    - Level: 8
+      Amount: 26
+    - Level: 9
+      Amount: 28
+    - Level: 10
+      Amount: 30
+- Id: 525
+  Name: NJ_HUUMA
+  Description: Throw Huuma Shuriken
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Flags:
+    TargetTrap: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount:
+  - Level: 1
+    Count: -3
+  - Level: 2
+    Count: -3
+  - Level: 3
+    Count: -4
+  - Level: 4
+    Count: -4
+  - Level: 5
+    Count: -5
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 1
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 2
+  CastTime: 1000
+  AfterCastActDelay: 500
+  Duration1: 100
+  FixedCastTime: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 15
+    - Level: 2
+      Amount: 20
+    - Level: 3
+      Amount: 25
+    - Level: 4
+      Amount: 30
+    - Level: 5
+      Amount: 35
+    Weapon:
+      Huuma: true
+- Id: 537
+  Name: NJ_HYOUSENSOU
+  Description: Spear of Ice
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Attack
+  Range: 9
+  Hit: Multi_Hit
+  HitCount:
+  - Level: 1
+    Count: 3
+  - Level: 2
+    Count: 4
+  - Level: 3
+    Count: 5
+  - Level: 4
+    Count: 6
+  - Level: 5
+    Count: 7
+  - Level: 6
+    Count: 8
+  - Level: 7
+    Count: 9
+  - Level: 8
+    Count: 10
+  - Level: 9
+    Count: 11
+  - Level: 10
+    Count: 12
+  Element: Water
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime:
+  - Level: 1
+    Time: 560
+  - Level: 2
+    Time: 1120
+  - Level: 3
+    Time: 1680
+  - Level: 4
+    Time: 2240
+  - Level: 5
+    Time: 2800
+  - Level: 6
+    Time: 3360
+  - Level: 7
+    Time: 3840
+  - Level: 8
+    Time: 4480
+  - Level: 9
+    Time: 5040
+  - Level: 10
+    Time: 5600
+  FixedCastTime:
+  - Level: 1
+    Time: 140
+  - Level: 2
+    Time: 280
+  - Level: 3
+    Time: 420
+  - Level: 4
+    Time: 560
+  - Level: 5
+    Time: 700
+  - Level: 6
+    Time: 840
+  - Level: 7
+    Time: 960
+  - Level: 8
+    Time: 1120
+  - Level: 9
+    Time: 1260
+  - Level: 10
+    Time: 1400
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 15
+    - Level: 2
+      Amount: 18
+    - Level: 3
+      Amount: 21
+    - Level: 4
+      Amount: 24
+    - Level: 5
+      Amount: 27
+    - Level: 6
+      Amount: 30
+    - Level: 7
+      Amount: 33
+    - Level: 8
+      Amount: 36
+    - Level: 9
+      Amount: 39
+    - Level: 10
+      Amount: 42
+- Id: 539
+  Name: NJ_HYOUSYOURAKU
+  Description: Ice Meteor
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Self
+  Hit: Single
+  HitCount: 1
+  Element: Water
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime:
+  - Level: 1
+    Time: 1700
+  - Level: 2
+    Time: 1900
+  - Level: 3
+    Time: 2100
+  - Level: 4
+    Time: 2300
+  - Level: 5
+    Time: 2500
+  AfterCastActDelay: 500
+  Duration1: 100
+  Duration2:
+  - Level: 1
+    Time: 5000
+  - Level: 2
+    Time: 10000
+  - Level: 3
+    Time: 15000
+  - Level: 4
+    Time: 20000
+  - Level: 5
+    Time: 25000
+  Cooldown: 300
+  FixedCastTime: 800
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 40
+    - Level: 2
+      Amount: 45
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 55
+    - Level: 5
+      Amount: 60
+    ItemCost:
+    - Item: Ice_Stone
+      Amount: 1
+  Unit:
+    Id: Dummyskill
+    Layout: 3
+    Interval: 1000
+    Target: Enemy
+    Flag:
+      PathCheck: true
+  Status: Freeze
+- Id: 544
+  Name: NJ_ISSEN
+  Description: Final Strike
+  MaxLevel: 10
+  Type: Misc
+  TargetType: Attack
+  DamageFlags:
+    IgnoreFlee: true
+  Flags:
+    IgnoreNonCritAtkBonus: true
+  Range: -5
+  Hit: Multi_Hit
+  HitCount: 1
+  AfterCastActDelay: 3000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 55
+    - Level: 2
+      Amount: 60
+    - Level: 3
+      Amount: 65
+    - Level: 4
+      Amount: 70
+    - Level: 5
+      Amount: 75
+    - Level: 6
+      Amount: 80
+    - Level: 7
+      Amount: 85
+    - Level: 8
+      Amount: 90
+    - Level: 9
+      Amount: 95
+    - Level: 10
+      Amount: 100
+- Id: 535
+  Name: NJ_KAENSIN
+  Description: Crimson Fire Formation
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Self
+  Hit: Multi_Hit
+  HitCount: 1
+  Element: Fire
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime:
+  - Level: 1
+    Time: 4800
+  - Level: 2
+    Time: 4400
+  - Level: 3
+    Time: 4000
+  - Level: 4
+    Time: 3600
+  - Level: 5
+    Time: 3200
+  - Level: 6
+    Time: 2800
+  - Level: 7
+    Time: 2400
+  - Level: 8
+    Time: 2000
+  - Level: 9
+    Time: 1600
+  - Level: 10
+    Time: 1200
+  AfterCastActDelay: 1000
+  Duration1: 20000
+  FixedCastTime:
+  - Level: 1
+    Time: 1200
+  - Level: 2
+    Time: 1100
+  - Level: 3
+    Time: 1000
+  - Level: 4
+    Time: 900
+  - Level: 5
+    Time: 800
+  - Level: 6
+    Time: 700
+  - Level: 7
+    Time: 600
+  - Level: 8
+    Time: 500
+  - Level: 9
+    Time: 400
+  - Level: 10
+    Time: 300
+  Requires:
+    SpCost: 25
+    ItemCost:
+    - Item: Flame_Stone
+      Amount: 1
+  Unit:
+    Id: Kaen
+    Layout: -1
+    Interval: 100
+    Target: Enemy
+    Flag:
+      PathCheck: true
+      RemovedByFireRain: true
+- Id: 542
+  Name: NJ_KAMAITACHI
+  Description: Kamaitachi
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Attack
+  Flags:
+    TargetTrap: true
+  Range:
+  - Level: 1
+    Size: 5
+  - Level: 2
+    Size: 6
+  - Level: 3
+    Size: 7
+  - Level: 4
+    Size: 8
+  - Level: 5
+    Size: 9
+  Hit: Multi_Hit
+  HitCount: -5
+  Element: Wind
+  SplashArea: 1
+  ActiveInstance:
+  - Level: 1
+    Max: 5
+  - Level: 2
+    Max: 6
+  - Level: 3
+    Max: 7
+  - Level: 4
+    Max: 8
+  - Level: 5
+    Max: 9
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime: 1200
+  FixedCastTime: 300
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 24
+    - Level: 2
+      Amount: 28
+    - Level: 3
+      Amount: 32
+    - Level: 4
+      Amount: 36
+    - Level: 5
+      Amount: 40
+    ItemCost:
+    - Item: Wind_Stone
+      Amount: 1
+- Id: 528
+  Name: NJ_KASUMIKIRI
+  Description: Vanishing Slash
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Range: -1
+  Hit: Single
+  HitCount: -2
+  Element: Weapon
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  Duration1:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 60000
+  - Level: 3
+    Time: 90000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 150000
+  - Level: 6
+    Time: 180000
+  - Level: 7
+    Time: 210000
+  - Level: 8
+    Time: 240000
+  - Level: 9
+    Time: 270000
+  - Level: 10
+    Time: 300000
+  Cooldown: 500
+  Requires:
+    SpCost: 8
+- Id: 530
+  Name: NJ_KIRIKAGE
+  Description: Shadow Slash
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Critical: true
+  Flags:
+    AllowWhenHidden: true
+    AlterRangeShadowJump: true
+  Range:
+  - Level: 1
+    Size: 6
+  - Level: 2
+    Size: 7
+  - Level: 3
+    Size: 8
+  - Level: 4
+    Size: 9
+  - Level: 5
+    Size: 10
+  Hit: Single
+  HitCount: -3
+  Element: Weapon
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 10
+    - Level: 2
+      Amount: 11
+    - Level: 3
+      Amount: 12
+    - Level: 4
+      Amount: 13
+    - Level: 5
+      Amount: 14
+    Status:
+      Hiding: true
+- Id: 534
+  Name: NJ_KOUENKA
+  Description: Crimson Fire Petal
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Attack
+  Range: 9
+  Hit: Multi_Hit
+  HitCount:
+  - Level: 1
+    Count: 1
+  - Level: 2
+    Count: 2
+  - Level: 3
+    Count: 3
+  - Level: 4
+    Count: 4
+  - Level: 5
+    Count: 5
+  - Level: 6
+    Count: 6
+  - Level: 7
+    Count: 7
+  - Level: 8
+    Count: 8
+  - Level: 9
+    Count: 9
+  - Level: 10
+    Count: 10
+  Element: Fire
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime:
+  - Level: 1
+    Time: 560
+  - Level: 2
+    Time: 1120
+  - Level: 3
+    Time: 1680
+  - Level: 4
+    Time: 2240
+  - Level: 5
+    Time: 2800
+  - Level: 6
+    Time: 3360
+  - Level: 7
+    Time: 3840
+  - Level: 8
+    Time: 4480
+  - Level: 9
+    Time: 5040
+  - Level: 10
+    Time: 5600
+  FixedCastTime:
+  - Level: 1
+    Time: 140
+  - Level: 2
+    Time: 280
+  - Level: 3
+    Time: 420
+  - Level: 4
+    Time: 560
+  - Level: 5
+    Time: 700
+  - Level: 6
+    Time: 840
+  - Level: 7
+    Time: 960
+  - Level: 8
+    Time: 1120
+  - Level: 9
+    Time: 1260
+  - Level: 10
+    Time: 1400
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 18
+    - Level: 2
+      Amount: 20
+    - Level: 3
+      Amount: 22
+    - Level: 4
+      Amount: 24
+    - Level: 5
+      Amount: 26
+    - Level: 6
+      Amount: 28
+    - Level: 7
+      Amount: 30
+    - Level: 8
+      Amount: 32
+    - Level: 9
+      Amount: 34
+    - Level: 10
+      Amount: 36
+- Id: 524
+  Name: NJ_KUNAI
+  Description: Throw Kunai
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    IgnoreFlee: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 3
+  Element: Weapon
+  Cooldown: 200
+  Requires:
+    SpCost: 10
+    Ammo:
+      Kunai: true
+    AmmoAmount: 1
+- Id: 543
+  Name: NJ_NEN
+  Description: Soul
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime:
+  - Level: 1
+    Time: 4000
+  - Level: 2
+    Time: 3200
+  - Level: 3
+    Time: 2400
+  - Level: 4
+    Time: 1600
+  - Level: 5
+    Time: 800
+  Duration1:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 45000
+  - Level: 3
+    Time: 60000
+  - Level: 4
+    Time: 75000
+  - Level: 5
+    Time: 90000
+  FixedCastTime:
+  - Level: 1
+    Time: 1000
+  - Level: 2
+    Time: 800
+  - Level: 3
+    Time: 600
+  - Level: 4
+    Time: 400
+  - Level: 5
+    Time: 200
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 20
+    - Level: 2
+      Amount: 30
+    - Level: 3
+      Amount: 40
+    - Level: 4
+      Amount: 50
+    - Level: 5
+      Amount: 60
+    HpRateCost: -5
+  Status: Nen
+- Id: 533
+  Name: NJ_NINPOU
+  Description: Spirit of the Blade
+  MaxLevel: 10
+- Id: 541
+  Name: NJ_RAIGEKISAI
+  Description: Lightning Strike of Destruction
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Ground
+  Range: 9
+  Hit: Single
+  HitCount: -3
+  Element: Wind
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  CastTime: 1700
+  Duration1: 100
+  FixedCastTime: 300
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 16
+    - Level: 2
+      Amount: 20
+    - Level: 3
+      Amount: 24
+    - Level: 4
+      Amount: 28
+    - Level: 5
+      Amount: 32
+    ItemCost:
+    - Item: Wind_Stone
+      Amount: 1
+  Unit:
+    Id: Dummyskill
+    Layout:
+    - Level: 1
+      Size: 1
+    - Level: 2
+      Size: 1
+    - Level: 3
+      Size: 2
+    - Level: 4
+      Size: 2
+    - Level: 5
+      Size: 3
+    Interval: 1000
+    Target: Enemy
+    Flag:
+      PathCheck: true
+- Id: 529
+  Name: NJ_SHADOWJUMP
+  Description: Shadow Leap
+  MaxLevel: 5
+  TargetType: Ground
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowWhenHidden: true
+  Range:
+  - Level: 1
+    Size: 6
+  - Level: 2
+    Size: 7
+  - Level: 3
+    Size: 8
+  - Level: 4
+    Size: 9
+  - Level: 5
+    Size: 10
+  Hit: Single
+  HitCount: 1
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  AfterCastActDelay: 1000
+  Requires:
+    SpCost: 10
+    Status:
+      Hiding: true
+- Id: 538
+  Name: NJ_SUITON
+  Description: Hidden Water
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Ground
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IgnoreHovering: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Water
+  CastTime: 2400
+  AfterCastActDelay: 2000
+  Duration1:
+  - Level: 1
+    Time: 15000
+  - Level: 2
+    Time: 20000
+  - Level: 3
+    Time: 25000
+  - Level: 4
+    Time: 30000
+  - Level: 5
+    Time: 35000
+  - Level: 6
+    Time: 40000
+  - Level: 7
+    Time: 45000
+  - Level: 8
+    Time: 50000
+  - Level: 9
+    Time: 55000
+  - Level: 10
+    Time: 60000
+  Duration2:
+  - Level: 1
+    Time: 15000
+  - Level: 2
+    Time: 20000
+  - Level: 3
+    Time: 25000
+  - Level: 4
+    Time: 30000
+  - Level: 5
+    Time: 35000
+  - Level: 6
+    Time: 40000
+  - Level: 7
+    Time: 45000
+  - Level: 8
+    Time: 50000
+  - Level: 9
+    Time: 55000
+  - Level: 10
+    Time: 60000
+  FixedCastTime: 600
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 15
+    - Level: 2
+      Amount: 18
+    - Level: 3
+      Amount: 21
+    - Level: 4
+      Amount: 24
+    - Level: 5
+      Amount: 27
+    - Level: 6
+      Amount: 30
+    - Level: 7
+      Amount: 33
+    - Level: 8
+      Amount: 36
+    - Level: 9
+      Amount: 39
+    - Level: 10
+      Amount: 42
+    ItemCost:
+    - Item: Ice_Stone
+      Amount: 1
+  Unit:
+    Id: Suiton
+    Layout:
+    - Level: 1
+      Size: 1
+    - Level: 2
+      Size: 1
+    - Level: 3
+      Size: 1
+    - Level: 4
+      Size: 2
+    - Level: 5
+      Size: 2
+    - Level: 6
+      Size: 2
+    - Level: 7
+      Size: 3
+    - Level: 8
+      Size: 3
+    - Level: 9
+      Size: 3
+    - Level: 10
+      Size: 4
+    Interval: -1
+    Flag:
+      PathCheck: true
+      RemovedByFireRain: true
+  Status: Suiton
+- Id: 523
+  Name: NJ_SYURIKEN
+  Description: Throw Shuriken
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    IgnoreFlee: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  Requires:
+    SpCost: 5
+    Ammo:
+      Shuriken: true
+    AmmoAmount: 1
+- Id: 527
+  Name: NJ_TATAMIGAESHI
+  Description: Improvised Defense
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  Knockback: 4
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  AfterCastActDelay: 3000
+  Duration1: 3000
+  Duration2: 3000
+  Requires:
+    SpCost: 15
+  Unit:
+    Id: Tatamigaeshi
+    Layout: -1
+    Interval: 2000
+    Target: Enemy
+    Flag:
+      NoOverlap: true
+      PathCheck: true
+  Status: Tatamigaeshi
+- Id: 522
+  Name: NJ_TOBIDOUGU
+  Description: Shuriken Training
+  MaxLevel: 10
+  Type: Weapon
+  HitCount: 1
+- Id: 531
+  Name: NJ_UTSUSEMI
+  Description: Cicada Skin Sheeding
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  Knockback: 7
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  AfterCastActDelay: 1000
+  Duration1:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 30000
+  - Level: 3
+    Time: 40000
+  - Level: 4
+    Time: 50000
+  - Level: 5
+    Time: 60000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 12
+    - Level: 2
+      Amount: 15
+    - Level: 3
+      Amount: 18
+    - Level: 4
+      Amount: 21
+    - Level: 5
+      Amount: 24
+  Status: Utsusemi
+- Id: 526
+  Name: NJ_ZENYNAGE
+  Description: Throw Zeny
+  MaxLevel: 10
+  Type: Misc
+  TargetType: Attack
+  DamageFlags:
+    IgnoreElement: true
+    IgnoreFlee: true
+  Flags:
+    IgnoreBgReduction: true
+    IgnoreGvgReduction: true
+    IgnoreNonCritAtkBonus: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  AfterCastActDelay: 5000
+  Requires:
+    SpCost: 50
+    ZenyCost:
+    - Level: 1
+      Amount: 500
+    - Level: 2
+      Amount: 1000
+    - Level: 3
+      Amount: 1500
+    - Level: 4
+      Amount: 2000
+    - Level: 5
+      Amount: 2500
+    - Level: 6
+      Amount: 3000
+    - Level: 7
+      Amount: 3500
+    - Level: 8
+      Amount: 4000
+    - Level: 9
+      Amount: 4500
+    - Level: 10
+      Amount: 5000

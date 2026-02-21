@@ -1,0 +1,177 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 2535
+  Name: ALL_BUYING_STORE
+  Description: Open Buying Store
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+  Requires:
+    SpCost: 30
+    ItemCost:
+    - Item: Buy_Market_Permit
+      Amount: 1
+- Id: 2544
+  Name: MC_CARTDECORATE
+  Description: Decorate Cart
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 40
+    State: Cart
+- Id: 153
+  Name: MC_CARTREVOLUTION
+  Description: Cart Revolution
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Flags:
+    IsQuest: true
+    TargetTrap: true
+    AllowOnMado: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  SplashArea: 1
+  Knockback: 2
+  Requires:
+    SpCost: 12
+    State: Cart
+- Id: 154
+  Name: MC_CHANGECART
+  Description: Change Cart
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 40
+    State: Cart
+- Id: 37
+  Name: MC_DISCOUNT
+  Description: Discount
+  MaxLevel: 10
+- Id: 40
+  Name: MC_IDENTIFY
+  Description: Item Appraisal
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 10
+- Id: 36
+  Name: MC_INCCARRY
+  Description: Enlarge Weight Limit
+  MaxLevel: 10
+- Id: 155
+  Name: MC_LOUD
+  Description: Crazy Uproar
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    IsQuest: true
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  SplashArea: -1
+  CastTime: 1000
+  AfterCastActDelay: 1000
+  Duration1: 300000
+  Cooldown: 30000
+  FixedCastTime: 300
+  Requires:
+    SpCost: 8
+  Status: Loud
+- Id: 42
+  Name: MC_MAMMONITE
+  Description: Mammonite
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Flags:
+    AllowOnMado: true
+  Range: -1
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  Requires:
+    SpCost: 5
+    ZenyCost:
+    - Level: 1
+      Amount: 100
+    - Level: 2
+      Amount: 200
+    - Level: 3
+      Amount: 300
+    - Level: 4
+      Amount: 400
+    - Level: 5
+      Amount: 500
+    - Level: 6
+      Amount: 600
+    - Level: 7
+      Amount: 700
+    - Level: 8
+      Amount: 800
+    - Level: 9
+      Amount: 900
+    - Level: 10
+      Amount: 1000
+- Id: 38
+  Name: MC_OVERCHARGE
+  Description: Overcharge
+  MaxLevel: 10
+- Id: 39
+  Name: MC_PUSHCART
+  Description: Pushcart
+  MaxLevel: 10
+  Range: 1
+- Id: 41
+  Name: MC_VENDING
+  Description: Vending
+  MaxLevel: 10
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 30
+    State: Cart

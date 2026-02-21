@@ -1,0 +1,188 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 483
+  Name: HW_GANBANTEIN
+  Description: Ganbantein
+  MaxLevel: 1
+  TargetType: Ground
+  DamageFlags:
+    NoDamage: true
+  Range: 18
+  Hit: Single
+  HitCount: 1
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 3
+  - Level: 4
+    Area: 4
+  - Level: 5
+    Area: 5
+  AfterCastActDelay: 5000
+  FixedCastTime: 3000
+  Requires:
+    SpCost: 40
+    ItemCost:
+    - Item: Yellow_Gemstone
+      Amount: 1
+    - Item: Blue_Gemstone
+      Amount: 1
+- Id: 484
+  Name: HW_GRAVITATION
+  Description: Gravitation Field
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Ground
+  Flags:
+    TargetEmperium: true
+    IgnoreHovering: true
+    TargetHidden: true
+  Range: 18
+  Hit: Multi_Hit
+  HitCount:
+  - Level: 1
+    Count: 2
+  - Level: 2
+    Count: 4
+  - Level: 3
+    Count: 6
+  - Level: 4
+    Count: 8
+  - Level: 5
+    Count: 10
+  CastTime: 5000
+  AfterCastActDelay: 1000
+  Duration1: 100
+  Cooldown: 5000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 60
+    - Level: 2
+      Amount: 70
+    - Level: 3
+      Amount: 80
+    - Level: 4
+      Amount: 90
+    - Level: 5
+      Amount: 100
+  Unit:
+    Id: Gravitation
+    Range: 2
+    Interval: 5100
+    Target: Enemy
+    Flag:
+      PathCheck: true
+      RemovedByFireRain: true
+  Status: Gravitation
+- Id: 365
+  Name: HW_MAGICCRASHER
+  Description: Stave Crasher
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Attack
+  Flags:
+    IgnoreNonCritAtkBonus: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 1
+  Element: Weapon
+  CastTime: 240
+  AfterCastActDelay: 300
+  FixedCastTime: 60
+  Requires:
+    SpCost: 8
+- Id: 366
+  Name: HW_MAGICPOWER
+  Description: Mystical Amplification
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime: 700
+  Duration1: 60000
+  FixedCastTime: 700
+  CastTimeFlags:
+    IgnoreDex: true
+    IgnoreItemBonus: true
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 35
+    - Level: 2
+      Amount: 40
+    - Level: 3
+      Amount: 45
+    - Level: 4
+      Amount: 50
+    - Level: 5
+      Amount: 55
+    - Level: 6
+      Amount: 60
+    - Level: 7
+      Amount: 65
+    - Level: 8
+      Amount: 70
+    - Level: 9
+      Amount: 75
+    - Level: 10
+      Amount: 80
+  Status: MagicPower
+- Id: 400
+  Name: HW_NAPALMVULCAN
+  Description: Napalm Vulcan
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Flags:
+    TargetTrap: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount:
+  - Level: 1
+    Count: 1
+  - Level: 2
+    Count: 2
+  - Level: 3
+    Count: 3
+  - Level: 4
+    Count: 4
+  - Level: 5
+    Count: 5
+  Element: Ghost
+  SplashArea: 1
+  CastTime: 800
+  AfterCastActDelay: 500
+  Duration2: 18000
+  Cooldown: 1000
+  FixedCastTime: 200
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 40
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 60
+    - Level: 5
+      Amount: 70
+  Status: Curse
+- Id: 364
+  Name: HW_SOULDRAIN
+  Description: Soul Drain
+  MaxLevel: 10
+  Type: Magic
+  HitCount: 1

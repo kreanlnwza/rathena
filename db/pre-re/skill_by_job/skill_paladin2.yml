@@ -1,0 +1,20 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 368
+  Name: PA_SACRIFICE
+  Description: Martyr's Reckoning
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    IgnoreDefense: true
+    IgnoreFlee: true
+  Hit: Single
+  HitCount: 1
+  AfterCastActDelay: 2000
+  Requires:
+    SpCost: 100
+  Status: Sacrifice

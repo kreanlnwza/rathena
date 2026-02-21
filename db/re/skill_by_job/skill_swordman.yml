@@ -1,0 +1,224 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 146
+  Name: SM_AUTOBERSERK
+  Description: Auto Berserk
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 1
+  Status: AutoBerserk
+- Id: 5
+  Name: SM_BASH
+  Description: Bash
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Range: -1
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  Duration2: 4500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 8
+    - Level: 2
+      Amount: 8
+    - Level: 3
+      Amount: 8
+    - Level: 4
+      Amount: 8
+    - Level: 5
+      Amount: 8
+    - Level: 6
+      Amount: 15
+    - Level: 7
+      Amount: 15
+    - Level: 8
+      Amount: 15
+    - Level: 9
+      Amount: 15
+    - Level: 10
+      Amount: 15
+    Weapon:
+      Fist: true
+      Dagger: true
+      1hSword: true
+      2hSword: true
+      1hSpear: true
+      2hSpear: true
+      1hAxe: true
+      2hAxe: true
+      Mace: true
+      2hMace: true
+      Staff: true
+      Knuckle: true
+      Musical: true
+      Whip: true
+      Book: true
+      Katar: true
+      Revolver: true
+      Rifle: true
+      Gatling: true
+      Shotgun: true
+      Grenade: true
+      Huuma: true
+  Status: Stun
+- Id: 8
+  Name: SM_ENDURE
+  Description: Endure
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 10000
+  - Level: 2
+    Time: 13000
+  - Level: 3
+    Time: 16000
+  - Level: 4
+    Time: 19000
+  - Level: 5
+    Time: 22000
+  - Level: 6
+    Time: 25000
+  - Level: 7
+    Time: 28000
+  - Level: 8
+    Time: 31000
+  - Level: 9
+    Time: 34000
+  - Level: 10
+    Time: 37000
+  Duration2: 10000
+  Cooldown: 10000
+  Requires:
+    SpCost: 10
+  Status: Endure
+- Id: 145
+  Name: SM_FATALBLOW
+  Description: Fatal Blow
+  MaxLevel: 1
+  Type: Weapon
+  Flags:
+    IsQuest: true
+- Id: 7
+  Name: SM_MAGNUM
+  Description: Magnum Break
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    Splash: true
+  Flags:
+    TargetTrap: true
+  Hit: Single
+  HitCount: 1
+  Element: Fire
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 2
+  - Level: 6
+    Area: 2
+  - Level: 7
+    Area: 2
+  - Level: 8
+    Area: 2
+  - Level: 9
+    Area: 2
+  - Level: 10
+    Area: 2
+  - Level: 11
+    Area: 4
+  Knockback: 2
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  AfterCastActDelay: 500
+  Duration2: 10000
+  Cooldown: 2000
+  Requires:
+    SpCost: 30
+  Status: Watk_Element
+- Id: 144
+  Name: SM_MOVINGRECOVERY
+  Description: Moving HP-Recovery
+  MaxLevel: 1
+  Flags:
+    IsQuest: true
+- Id: 6
+  Name: SM_PROVOKE
+  Description: Provoke
+  MaxLevel: 10
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Duration1: 30000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 4
+    - Level: 2
+      Amount: 5
+    - Level: 3
+      Amount: 6
+    - Level: 4
+      Amount: 7
+    - Level: 5
+      Amount: 8
+    - Level: 6
+      Amount: 9
+    - Level: 7
+      Amount: 10
+    - Level: 8
+      Amount: 11
+    - Level: 9
+      Amount: 12
+    - Level: 10
+      Amount: 13
+  Status: Provoke
+- Id: 4
+  Name: SM_RECOVERY
+  Description: Increase HP Recovery
+  MaxLevel: 10
+- Id: 2
+  Name: SM_SWORD
+  Description: Sword Mastery
+  MaxLevel: 10
+  Type: Weapon
+- Id: 3
+  Name: SM_TWOHAND
+  Description: Two-Handed Sword Mastery
+  MaxLevel: 10
+  Type: Weapon

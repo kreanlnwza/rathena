@@ -1,0 +1,187 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 361
+  Name: HP_ASSUMPTIO
+  Description: Assumptio
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  SplashArea: 1
+  CastTime:
+  - Level: 1
+    Time: 1000
+  - Level: 2
+    Time: 1500
+  - Level: 3
+    Time: 2000
+  - Level: 4
+    Time: 2500
+  - Level: 5
+    Time: 3000
+  AfterCastActDelay:
+  - Level: 1
+    Time: 1100
+  - Level: 2
+    Time: 1200
+  - Level: 3
+    Time: 1300
+  - Level: 4
+    Time: 1400
+  - Level: 5
+    Time: 1500
+  Duration1:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 40000
+  - Level: 3
+    Time: 60000
+  - Level: 4
+    Time: 80000
+  - Level: 5
+    Time: 100000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 20
+    - Level: 2
+      Amount: 30
+    - Level: 3
+      Amount: 40
+    - Level: 4
+      Amount: 50
+    - Level: 5
+      Amount: 60
+  Status: Assumptio
+- Id: 362
+  Name: HP_BASILICA
+  Description: Basilica
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Range: 4
+  Hit: Single
+  HitCount: 1
+  ActiveInstance: 1
+  Knockback: 2
+  CastTime:
+  - Level: 1
+    Time: 5000
+  - Level: 2
+    Time: 6000
+  - Level: 3
+    Time: 7000
+  - Level: 4
+    Time: 8000
+  - Level: 5
+    Time: 9000
+  AfterCastActDelay:
+  - Level: 1
+    Time: 2000
+  - Level: 2
+    Time: 3000
+  - Level: 3
+    Time: 4000
+  - Level: 4
+    Time: 5000
+  - Level: 5
+    Time: 6000
+  Duration1:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 25000
+  - Level: 3
+    Time: 30000
+  - Level: 4
+    Time: 35000
+  - Level: 5
+    Time: 40000
+  Duration2:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 25000
+  - Level: 3
+    Time: 30000
+  - Level: 4
+    Time: 35000
+  - Level: 5
+    Time: 40000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 80
+    - Level: 2
+      Amount: 90
+    - Level: 3
+      Amount: 100
+    - Level: 4
+      Amount: 110
+    - Level: 5
+      Amount: 120
+    ItemCost:
+    - Item: Yellow_Gemstone
+      Amount: 1
+    - Item: Red_Gemstone
+      Amount: 1
+    - Item: Blue_Gemstone
+      Amount: 1
+    - Item: Holy_Water
+      Amount: 1
+  Unit:
+    Id: Basilica
+    Layout: 2
+    Interval: 300
+    Flag:
+      RangedSingleUnit: true
+  Status: Basilica
+- Id: 481
+  Name: HP_MANARECHARGE
+  Description: Mana Recharge
+  MaxLevel: 5
+- Id: 363
+  Name: HP_MEDITATIO
+  Description: Meditatio
+  MaxLevel: 10
+  Type: Magic
+- Id: 71
+  Name: PR_SLOWPOISON
+  Description: Slow Poison
+  MaxLevel: 4
+  Type: Magic
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 10000
+  - Level: 2
+    Time: 20000
+  - Level: 3
+    Time: 30000
+  - Level: 4
+    Time: 40000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 6
+    - Level: 2
+      Amount: 8
+    - Level: 3
+      Amount: 10
+    - Level: 4
+      Amount: 12
+  Status: SlowPoison

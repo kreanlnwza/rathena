@@ -1,0 +1,93 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 389
+  Name: ST_CHASEWALK
+  Description: Stealth
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IgnoreKagehumi: true
+    Toggleable: true
+  Hit: Single
+  HitCount: 1
+  CastTime: 1200
+  Duration1: 10000
+  Duration2: 30000
+  Requires:
+    SpCost: 10
+  Status: ChaseWalk
+- Id: 476
+  Name: ST_FULLSTRIP
+  Description: Divest All
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  AfterCastActDelay: 1000
+  Duration1:
+  - Level: 1
+    Time: 75000
+  - Level: 2
+    Time: 90000
+  - Level: 3
+    Time: 105000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 135000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 22
+    - Level: 2
+      Amount: 24
+    - Level: 3
+      Amount: 26
+    - Level: 4
+      Amount: 28
+    - Level: 5
+      Amount: 30
+- Id: 475
+  Name: ST_PRESERVE
+  Description: Preserve
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  HitCount: 1
+  CastTime: 1000
+  Duration1: 600000
+  Requires:
+    SpCost: 30
+  Status: Preserve
+- Id: 390
+  Name: ST_REJECTSWORD
+  Description: Counter Instinct
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  HitCount: 1
+  Duration1: 300000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 10
+    - Level: 2
+      Amount: 15
+    - Level: 3
+      Amount: 20
+    - Level: 4
+      Amount: 25
+    - Level: 5
+      Amount: 30
+  Status: RejectSword

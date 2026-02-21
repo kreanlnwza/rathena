@@ -1,0 +1,518 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 5260
+  Name: IG_ATTACK_STANCE
+  Description: Attack Stance
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  FixedCastTime: 500
+  Requires:
+    SpCost: 50
+  Status: Attack_Stance
+- Id: 5267
+  Name: IG_CROSS_RAIN
+  Description: Cross Rain
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Ground
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Holy
+  GiveAp: 6
+  CastTime: 4000
+  AfterCastActDelay: 150
+  Duration1: 2400
+  Cooldown: 2400
+  FixedCastTime: 1500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 67
+    - Level: 2
+      Amount: 70
+    - Level: 3
+      Amount: 73
+    - Level: 4
+      Amount: 76
+    - Level: 5
+      Amount: 79
+    - Level: 6
+      Amount: 82
+    - Level: 7
+      Amount: 85
+    - Level: 8
+      Amount: 88
+    - Level: 9
+      Amount: 91
+    - Level: 10
+      Amount: 94
+  Unit:
+    Id: Cross_Rain
+    Range:
+    - Level: 1
+      Size: 1
+    - Level: 2
+      Size: 1
+    - Level: 3
+      Size: 1
+    - Level: 4
+      Size: 2
+    - Level: 5
+      Size: 2
+    - Level: 6
+      Size: 2
+    - Level: 7
+      Size: 3
+    - Level: 8
+      Size: 3
+    - Level: 9
+      Size: 3
+    - Level: 10
+      Size: 4
+    Interval: 300
+    Target: Enemy
+    Flag:
+      NoOverlap: true
+      PathCheck: true
+- Id: 5263
+  Name: IG_GRAND_JUDGEMENT
+  Description: Grand Judgement
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  SplashArea: 3
+  CastTime: 1000
+  Duration1: 150000
+  Cooldown: 500
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 51
+    - Level: 2
+      Amount: 54
+    - Level: 3
+      Amount: 57
+    - Level: 4
+      Amount: 60
+    - Level: 5
+      Amount: 63
+    - Level: 6
+      Amount: 66
+    - Level: 7
+      Amount: 69
+    - Level: 8
+      Amount: 72
+    - Level: 9
+      Amount: 75
+    - Level: 10
+      Amount: 78
+    ApCost: 15
+    Weapon:
+      1hSpear: true
+      2hSpear: true
+    Status:
+      Attack_Stance: true
+  Status: Spear_Scar
+- Id: 5256
+  Name: IG_GUARDIAN_SHIELD
+  Description: Guardian Shield
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Flags:
+    Toggleable: true
+  Hit: Single
+  HitCount: 1
+  SplashArea: 10
+  CastTime: 2000
+  AfterCastActDelay: 300
+  Duration1: 40000
+  Cooldown: 25000
+  FixedCastTime: 1000
+  Requires:
+    SpCost: 60
+    ApCost: 35
+    Status:
+      Guard_Stance: true
+  Status: Guardian_S
+- Id: 5255
+  Name: IG_GUARD_STANCE
+  Description: Guard Stance
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    Toggleable: true
+  Hit: Single
+  HitCount: 1
+  FixedCastTime: 500
+  Requires:
+    SpCost: 50
+    State: Shield
+  Status: Guard_Stance
+- Id: 5262
+  Name: IG_HOLY_SHIELD
+  Description: Holy Shield
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime: 2000
+  AfterCastActDelay: 1000
+  Duration1: 180000
+  Cooldown:
+  - Level: 1
+    Time: 40000
+  - Level: 2
+    Time: 60000
+  - Level: 3
+    Time: 80000
+  - Level: 4
+    Time: 100000
+  - Level: 5
+    Time: 120000
+  FixedCastTime: 1000
+  Requires:
+    SpCost: 60
+    State: Shield
+  Status: Holy_S
+- Id: 6504
+  Name: IG_IMPERIAL_CROSS
+  Description: Imperial Cross
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  Range: 2
+  Hit: Multi_Hit
+  HitCount: 3
+  Element: Weapon
+  GiveAp: 2
+  AfterCastActDelay: 700
+  Cooldown: 400
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 49
+    - Level: 2
+      Amount: 53
+    - Level: 3
+      Amount: 57
+    - Level: 4
+      Amount: 61
+    - Level: 5
+      Amount: 65
+    Status:
+      Attack_Stance: true
+- Id: 6505
+  Name: IG_IMPERIAL_PRESSURE
+  Description: Imperial Pressure
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: -7
+  GiveAp: 2
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 3
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 4
+  CastCancel: true
+  CastTime: 2000
+  AfterCastActDelay: 1000
+  Cooldown: 450
+  FixedCastTime: 1500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 89
+    - Level: 2
+      Amount: 93
+    - Level: 3
+      Amount: 97
+    - Level: 4
+      Amount: 101
+    - Level: 5
+      Amount: 105
+- Id: 5264
+  Name: IG_JUDGEMENT_CROSS
+  Description: Judgement Cross
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Attack
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: -10
+  Element: Neutral
+  CastTime: 4000
+  Cooldown: 500
+  FixedCastTime: 1500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 60
+    - Level: 2
+      Amount: 65
+    - Level: 3
+      Amount: 70
+    - Level: 4
+      Amount: 75
+    - Level: 5
+      Amount: 80
+    - Level: 6
+      Amount: 85
+    - Level: 7
+      Amount: 90
+    - Level: 8
+      Amount: 95
+    - Level: 9
+      Amount: 100
+    - Level: 10
+      Amount: 105
+    ApCost: 10
+- Id: 5266
+  Name: IG_OVERSLASH
+  Description: Overslash
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 3
+  Hit: Multi_Hit
+  HitCount: 3
+  Element: Weapon
+  SplashArea: 3
+  GiveAp: 5
+  AfterCastActDelay: 500
+  Cooldown: 700
+  FixedCastTime: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 38
+    - Level: 2
+      Amount: 41
+    - Level: 3
+      Amount: 44
+    - Level: 4
+      Amount: 47
+    - Level: 5
+      Amount: 50
+    - Level: 6
+      Amount: 53
+    - Level: 7
+      Amount: 56
+    - Level: 8
+      Amount: 59
+    - Level: 9
+      Amount: 62
+    - Level: 10
+      Amount: 65
+    Status:
+      Attack_Stance: true
+- Id: 6503
+  Name: IG_RADIANT_SPEAR
+  Description: Radiant Spear
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+    Critical: true
+  Range: 7
+  Hit: Multi_Hit
+  HitCount: 2
+  Element: Weapon
+  GiveAp: 2
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 1
+  - Level: 4
+    Area: 1
+  - Level: 5
+    Area: 2
+  - Level: 6
+    Area: 2
+  - Level: 7
+    Area: 2
+  - Level: 8
+    Area: 2
+  - Level: 9
+    Area: 3
+  - Level: 10
+    Area: 3
+  CastTime: 1000
+  AfterCastActDelay: 1200
+  Cooldown: 700
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 67
+    - Level: 2
+      Amount: 69
+    - Level: 3
+      Amount: 71
+    - Level: 4
+      Amount: 73
+    - Level: 5
+      Amount: 75
+    - Level: 6
+      Amount: 77
+    - Level: 7
+      Amount: 79
+    - Level: 8
+      Amount: 81
+    - Level: 9
+      Amount: 83
+    - Level: 10
+      Amount: 85
+    Weapon:
+      1hSpear: true
+    Status:
+      Attack_Stance: true
+- Id: 5257
+  Name: IG_REBOUND_SHIELD
+  Description: Rebound Shield
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime: 2000
+  AfterCastActDelay: 1000
+  Duration1: 60000
+  Cooldown: 15000
+  FixedCastTime: 1000
+  Requires:
+    SpCost: 60
+    Status:
+      Guard_Stance: true
+  Status: Rebound_S
+- Id: 5258
+  Name: IG_SHIELD_MASTERY
+  Description: Shield Mastery
+  MaxLevel: 10
+- Id: 5265
+  Name: IG_SHIELD_SHOOTING
+  Description: Shield Shooting
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: -7
+  Element: Weapon
+  GiveAp: 5
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 3
+  CastTime: 500
+  AfterCastActDelay: 500
+  Duration1: 10000
+  Cooldown: 700
+  FixedCastTime: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 40
+    - Level: 2
+      Amount: 45
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 55
+    - Level: 5
+      Amount: 60
+    State: Shield
+    Status:
+      Attack_Stance: true
+  Status: Shield_Power
+- Id: 5259
+  Name: IG_SPEAR_SWORD_M
+  Description: Spear And Sword Mastery
+  MaxLevel: 10
+- Id: 5261
+  Name: IG_ULTIMATE_SACRIFICE
+  Description: Ultimate Sacrifice
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 3
+  CastTime: 2000
+  AfterCastActDelay: 1000
+  Duration1: 300000
+  Cooldown:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 40000
+  - Level: 3
+    Time: 60000
+  - Level: 4
+    Time: 80000
+  - Level: 5
+    Time: 100000
+  FixedCastTime: 2000
+  Requires:
+    SpCost: 120
+    Status:
+      Guard_Stance: true
+  Status: Ultimate_S

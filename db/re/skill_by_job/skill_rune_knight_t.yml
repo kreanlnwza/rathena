@@ -1,0 +1,19 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 359
+  Name: LK_BERSERK
+  Description: Frenzy
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  Duration1: 300000
+  Duration2: 10000
+  Requires:
+    SpCost: 200
+  Status: Berserk

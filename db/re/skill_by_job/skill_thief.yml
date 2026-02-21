@@ -1,0 +1,178 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 150
+  Name: TF_BACKSLIDING
+  Description: Back Slide
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+    IgnoreKagehumi: true
+  Hit: Single
+  HitCount: 1
+  Knockback: 5
+  Requires:
+    SpCost: 7
+- Id: 53
+  Name: TF_DETOXIFY
+  Description: Detoxify
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Poison
+  Requires:
+    SpCost: 10
+- Id: 48
+  Name: TF_DOUBLE
+  Description: Double Attack
+  MaxLevel: 10
+  Type: Weapon
+  DamageFlags:
+    Critical: true
+  Range: -1
+  Hit: Multi_Hit
+  HitCount: 2
+  Element: Weapon
+- Id: 51
+  Name: TF_HIDING
+  Description: Hiding
+  MaxLevel: 10
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowWhenHidden: true
+    IgnoreKagehumi: true
+    IgnoreWugBite: true
+    Toggleable: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 60000
+  - Level: 3
+    Time: 90000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 150000
+  - Level: 6
+    Time: 180000
+  - Level: 7
+    Time: 210000
+  - Level: 8
+    Time: 240000
+  - Level: 9
+    Time: 270000
+  - Level: 10
+    Time: 300000
+  Requires:
+    SpCost: 10
+  Status: Hiding
+- Id: 49
+  Name: TF_MISS
+  Description: Improve Dodge
+  MaxLevel: 10
+  Type: Weapon
+- Id: 151
+  Name: TF_PICKSTONE
+  Description: Find Stone
+  MaxLevel: 1
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    IsQuest: true
+  Hit: Single
+  HitCount: 1
+  FixedCastTime: 500
+  Requires:
+    SpCost: 2
+    State: Recover_Weight_Rate
+- Id: 52
+  Name: TF_POISON
+  Description: Envenom
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  Range: -2
+  Hit: Single
+  HitCount: 1
+  Element: Poison
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  Duration2: 18000
+  Requires:
+    SpCost: 12
+  Status: Poison
+- Id: 149
+  Name: TF_SPRINKLESAND
+  Description: Sand Attack
+  MaxLevel: 1
+  Type: Weapon
+  TargetType: Attack
+  Flags:
+    IsQuest: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Element: Earth
+  Duration2: 18000
+  Requires:
+    SpCost: 9
+  Status: Blind
+- Id: 50
+  Name: TF_STEAL
+  Description: Steal
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost: 10
+- Id: 152
+  Name: TF_THROWSTONE
+  Description: Stone Fling
+  MaxLevel: 1
+  Type: Misc
+  TargetType: Attack
+  DamageFlags:
+    IgnoreFlee: true
+  Flags:
+    IgnoreNonCritAtkBonus: true
+    IsQuest: true
+  Range: 7
+  Hit: Single
+  HitCount: 1
+  CopyFlags:
+    Skill:
+      Plagiarism: true
+      Reproduce: true
+  AfterCastActDelay: 100
+  Duration1: 4500
+  Duration2: 20000
+  Requires:
+    SpCost: 2
+    ItemCost:
+    - Item: Stone
+      Amount: 1
+  Status: Stun

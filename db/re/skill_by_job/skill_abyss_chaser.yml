@@ -1,0 +1,572 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 5314
+  Name: ABC_ABYSS_DAGGER
+  Description: Abyss Dagger
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    Splash: true
+  Hit: Single
+  HitCount: 2
+  Element: Weapon
+  SplashArea: 3
+  AfterCastActDelay: 500
+  Duration1:
+  - Level: 1
+    Time: 3000
+  - Level: 2
+    Time: 6000
+  - Level: 3
+    Time: 9000
+  - Level: 4
+    Time: 12000
+  - Level: 5
+    Time: 15000
+  Cooldown:
+  - Level: 1
+    Time: 1600
+  - Level: 2
+    Time: 1300
+  - Level: 3
+    Time: 1000
+  - Level: 4
+    Time: 700
+  - Level: 5
+    Time: 400
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 60
+    - Level: 2
+      Amount: 64
+    - Level: 3
+      Amount: 68
+    - Level: 4
+      Amount: 72
+    - Level: 5
+      Amount: 76
+    Weapon:
+      Dagger: true
+      1hSword: true
+  Status: Abyss_Dagger
+- Id: 6515
+  Name: ABC_ABYSS_FLAME
+  Description: Abyss Flame
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+    Splash: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 3
+  Element: Fire
+  GiveAp: 2
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 3
+  CastCancel: true
+  CastTime: 3000
+  AfterCastActDelay: 1000
+  Cooldown: 700
+  FixedCastTime: 1500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 82
+    - Level: 2
+      Amount: 86
+    - Level: 3
+      Amount: 90
+    - Level: 4
+      Amount: 94
+    - Level: 5
+      Amount: 98
+- Id: 5318
+  Name: ABC_ABYSS_SLAYER
+  Description: Abyss Slayer
+  MaxLevel: 10
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  AfterCastActDelay: 1000
+  Duration1: 300000
+  Cooldown: 60000
+  FixedCastTime: 1000
+  Requires:
+    SpCost: 100
+    ApCost: 120
+  Status: Abyss_Slayer
+- Id: 5321
+  Name: ABC_ABYSS_SQUARE
+  Description: Abyss Square
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Ground
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 1
+  GiveAp: 5
+  CastTime: 5000
+  AfterCastActDelay: 500
+  Duration1: 3000
+  Cooldown: 3000
+  FixedCastTime: 1500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 65
+    - Level: 2
+      Amount: 75
+    - Level: 3
+      Amount: 85
+    - Level: 4
+      Amount: 95
+    - Level: 5
+      Amount: 105
+  Unit:
+    Id: Abyss_Square
+    Range: 3
+    Interval: 300
+    Target: Enemy
+    Flag:
+      NoOverlap: true
+      PathCheck: true
+- Id: 5319
+  Name: ABC_ABYSS_STRIKE
+  Description: Omega Abyss Strike
+  MaxLevel: 10
+  Type: Magic
+  TargetType: Ground
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Fire
+  CastTime: 4000
+  AfterCastActDelay: 500
+  Duration1: 100
+  Cooldown: 700
+  FixedCastTime: 1000
+  Requires:
+    SpCost: 125
+    ApCost: 10
+  Unit:
+    Id: Dummyskill
+    Range: 4
+    Interval: 1000
+    Target: Enemy
+    Flag:
+      PathCheck: true
+- Id: 5316
+  Name: ABC_CHAIN_REACTION_SHOT
+  Description: Chain Reaction Shot
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 3
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 4
+  CastTime: 1000
+  Cooldown: 1000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 35
+    - Level: 2
+      Amount: 45
+    - Level: 3
+      Amount: 55
+    - Level: 4
+      Amount: 65
+    - Level: 5
+      Amount: 75
+    Weapon:
+      Bow: true
+    Ammo:
+      Arrow: true
+    AmmoAmount: 7
+- Id: 6513
+  Name: ABC_CHASING_BREAK
+  Description: Chasing Break
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 7
+  Hit: Multi_Hit
+  HitCount: 5
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 3
+  Element: Weapon
+  GiveAp: 2
+  AfterCastActDelay: 1000
+  Cooldown: 700
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 62
+    - Level: 2
+      Amount: 66
+    - Level: 3
+      Amount: 70
+    - Level: 4
+      Amount: 74
+    - Level: 5
+      Amount: 78
+- Id: 6514
+  Name: ABC_CHASING_SHOT
+  Description: Chasing Shot
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+    Critical: true
+  Range: 7
+  Hit: Multi_Hit
+  HitCount: 2
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 3
+  Element: Weapon
+  GiveAp: 2
+  AfterCastActDelay: 500
+  CastTime: 1000
+  Cooldown: 750
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 85
+    - Level: 2
+      Amount: 90
+    - Level: 3
+      Amount: 95
+    - Level: 4
+      Amount: 100
+    - Level: 5
+      Amount: 105
+    Weapon:
+      Bow: true
+- Id: 5311
+  Name: ABC_DAGGER_AND_BOW_M
+  Description: Dagger And Bow Mastery
+  MaxLevel: 10
+- Id: 5320
+  Name: ABC_DEFT_STAB
+  Description: Deft Stab
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 2
+  Hit: Multi_Hit
+  HitCount: 5
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 2
+  - Level: 6
+    Area: 3
+  - Level: 7
+    Area: 3
+  - Level: 8
+    Area: 3
+  - Level: 9
+    Area: 3
+  - Level: 10
+    Area: 3
+  GiveAp: 3
+  AfterCastActDelay: 500
+  Cooldown: 700
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 45
+    - Level: 2
+      Amount: 48
+    - Level: 3
+      Amount: 51
+    - Level: 4
+      Amount: 54
+    - Level: 5
+      Amount: 57
+    - Level: 6
+      Amount: 60
+    - Level: 7
+      Amount: 63
+    - Level: 8
+      Amount: 66
+    - Level: 9
+      Amount: 69
+    - Level: 10
+      Amount: 72
+- Id: 5322
+  Name: ABC_FRENZY_SHOT
+  Description: Frenzy Shot
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Critical: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 2
+  Element: Weapon
+  GiveAp: 3
+  AfterCastActDelay: 500
+  Cooldown: 350
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 47
+    - Level: 2
+      Amount: 49
+    - Level: 3
+      Amount: 51
+    - Level: 4
+      Amount: 53
+    - Level: 5
+      Amount: 55
+    - Level: 6
+      Amount: 57
+    - Level: 7
+      Amount: 59
+    - Level: 8
+      Amount: 61
+    - Level: 9
+      Amount: 63
+    - Level: 10
+      Amount: 65
+    Weapon:
+      Bow: true
+    Ammo:
+      Arrow: true
+    AmmoAmount: 3
+- Id: 5317
+  Name: ABC_FROM_THE_ABYSS
+  Description: From The Abyss
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  GiveAp:
+  - Level: 1
+    Amount: 4
+  - Level: 2
+    Amount: 8
+  - Level: 3
+    Amount: 12
+  - Level: 4
+    Amount: 16
+  - Level: 5
+    Amount: 20
+  Duration1:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 60000
+  - Level: 3
+    Time: 90000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 150000
+  Duration2:
+  - Level: 1
+    Time: 3000
+  - Level: 2
+    Time: 2500
+  - Level: 3
+    Time: 2000
+  - Level: 4
+    Time: 1500
+  - Level: 5
+    Time: 1000
+  Cooldown: 30000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 40
+    - Level: 2
+      Amount: 50
+    - Level: 3
+      Amount: 60
+    - Level: 4
+      Amount: 70
+    - Level: 5
+      Amount: 80
+  Status: AbyssForceWeapon
+- Id: 6512
+  Name: ABC_HIT_AND_SLIDING
+  Description: Hit And Sliding
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  Range: 2
+  Hit: Multi_Hit
+  HitCount: -5
+  Element: Weapon
+  GiveAp: 2
+  Duration1: 60000
+  Cooldown:
+  - Level: 1
+    Time: 3000
+  - Level: 2
+    Time: 2500
+  - Level: 3
+    Time: 2000
+  - Level: 4
+    Time: 1500
+  - Level: 5
+    Time: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 43
+    - Level: 2
+      Amount: 46
+    - Level: 3
+      Amount: 49
+    - Level: 4
+      Amount: 52
+    - Level: 5
+      Amount: 55
+  Status: Chasing
+- Id: 5312
+  Name: ABC_MAGIC_SWORD_M
+  Description: Magic Sword Mastery
+  MaxLevel: 10
+- Id: 5313
+  Name: ABC_STRIP_SHADOW
+  Description: Strip Shadow
+  MaxLevel: 5
+  TargetType: Attack
+  DamageFlags:
+    NoDamage: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  CastTime: 1000
+  AfterCastActDelay: 1000
+  Duration1:
+  - Level: 1
+    Time: 60000
+  - Level: 2
+    Time: 70000
+  - Level: 3
+    Time: 80000
+  - Level: 4
+    Time: 90000
+  - Level: 5
+    Time: 100000
+  Cooldown: 2000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 29
+    - Level: 2
+      Amount: 33
+    - Level: 3
+      Amount: 37
+    - Level: 4
+      Amount: 41
+    - Level: 5
+      Amount: 45
+  Status: Shadow_Strip
+- Id: 5315
+  Name: ABC_UNLUCKY_RUSH
+  Description: Unlucky Rush
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  Range: 7
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  AfterCastActDelay: 500
+  Duration1: 20000
+  Cooldown:
+  - Level: 1
+    Time: 1250
+  - Level: 2
+    Time: 1000
+  - Level: 3
+    Time: 750
+  - Level: 4
+    Time: 500
+  - Level: 5
+    Time: 250
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 35
+    - Level: 3
+      Amount: 40
+    - Level: 4
+      Amount: 45
+    - Level: 5
+      Amount: 50
+  Status: HandicapState_Misfortune

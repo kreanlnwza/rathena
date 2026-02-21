@@ -1,0 +1,694 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 5301
+  Name: MT_ABR_M
+  Description: ABR Mastery
+  MaxLevel: 10
+- Id: 5295
+  Name: MT_AXE_STOMP
+  Description: Axe Stomp
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    Splash: true
+  Flags:
+    AllowOnMado: true
+  Hit: Multi_Hit
+  HitCount: 1
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 3
+  GiveAp: 3
+  AfterCastActDelay: 700
+  Duration1:
+  - Level: 1
+    Time: 10000
+  - Level: 2
+    Time: 15000
+  - Level: 3
+    Time: 20000
+  - Level: 4
+    Time: 25000
+  - Level: 5
+    Time: 30000
+  Cooldown: 700
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 45
+    - Level: 2
+      Amount: 55
+    - Level: 3
+      Amount: 65
+    - Level: 4
+      Amount: 75
+    - Level: 5
+      Amount: 85
+    Weapon:
+      1hAxe: true
+      2hAxe: true
+  Status: Axe_Stomp
+- Id: 5298
+  Name: MT_A_MACHINE
+  Description: Attack Machine
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Support
+  DamageFlags:
+    Splash: true
+  Flags:
+    PartyOnly: true
+    AllowOnMado: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 3
+  Duration1:
+  - Level: 1
+    Time: 80000
+  - Level: 2
+    Time: 120000
+  - Level: 3
+    Time: 160000
+  - Level: 4
+    Time: 200000
+  - Level: 5
+    Time: 240000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 43
+    - Level: 2
+      Amount: 46
+    - Level: 3
+      Amount: 49
+    - Level: 4
+      Amount: 52
+    - Level: 5
+      Amount: 55
+    ItemCost:
+    - Item: Device_Capsule
+      Amount: 1
+  Status: A_Machine
+- Id: 5299
+  Name: MT_D_MACHINE
+  Description: Defense Machine
+  MaxLevel: 5
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    PartyOnly: true
+    AllowOnMado: true
+  Range: 1
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 80000
+  - Level: 2
+    Time: 120000
+  - Level: 3
+    Time: 160000
+  - Level: 4
+    Time: 200000
+  - Level: 5
+    Time: 240000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 43
+    - Level: 2
+      Amount: 46
+    - Level: 3
+      Amount: 49
+    - Level: 4
+      Amount: 52
+    - Level: 5
+      Amount: 55
+    ItemCost:
+    - Item: Device_Capsule
+      Amount: 1
+  Status: D_Machine
+- Id: 6508
+  Name: MT_ENERGY_CANNONADE
+  Description: Energy Cannonade
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+    IgnoreDefense: true
+  Flags:
+    AllowOnMado: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 7
+  Element: Weapon
+  GiveAp: 3
+  CastTime: 1500
+  AfterCastActDelay: 500
+  SplashArea:
+  - Level: 1
+    Area: 2
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 3
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 4
+  Cooldown: 1250
+  FixedCastTime: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 58
+    - Level: 2
+      Amount: 64
+    - Level: 3
+      Amount: 70
+    - Level: 4
+      Amount: 76
+    - Level: 5
+      Amount: 82
+    State: Mado
+- Id: 6004
+  Name: MT_MIGHTY_SMASH
+  Description: Mighty Smash
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Self
+  DamageFlags:
+    Splash: true
+  Flags:
+    AllowOnMado: true
+  Range: 1
+  Hit: Multi_Hit
+  HitCount: 5
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 1
+  - Level: 4
+    Area: 1
+  - Level: 5
+    Area: 2
+  - Level: 6
+    Area: 2
+  - Level: 7
+    Area: 2
+  - Level: 8
+    Area: 2
+  - Level: 9
+    Area: 3
+  - Level: 10
+    Area: 3
+  AfterCastActDelay: 700
+  Cooldown: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 68
+    - Level: 2
+      Amount: 71
+    - Level: 3
+      Amount: 74
+    - Level: 4
+      Amount: 77
+    - Level: 5
+      Amount: 80
+    - Level: 6
+      Amount: 83
+    - Level: 7
+      Amount: 86
+    - Level: 8
+      Amount: 89
+    - Level: 9
+      Amount: 92
+    - Level: 10
+      Amount: 95
+    Weapon:
+      1hAxe: true
+      2hAxe: true
+- Id: 5297
+  Name: MT_M_MACHINE
+  Description: Manufacture Machine
+  MaxLevel: 5
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 40
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 60
+    - Level: 5
+      Amount: 70
+    ItemCost:
+    - Item: Device_M_Book
+      Amount: 0
+- Id: 6507
+  Name: MT_POWERFUL_SWING
+  Description: Powerful Swing
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 2
+  Hit: Multi_Hit
+  HitCount: 5
+  Element: Weapon
+  GiveAp: 2
+  AfterCastActDelay: 1000
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 2
+  - Level: 5
+    Area: 3
+  Cooldown: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 62
+    - Level: 2
+      Amount: 64
+    - Level: 3
+      Amount: 66
+    - Level: 4
+      Amount: 68
+    - Level: 5
+      Amount: 70
+    Weapon:
+      2hAxe: true
+- Id: 5296
+  Name: MT_RUSH_QUAKE
+  Description: Rush Quake
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Flags:
+    AllowOnMado: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 1
+  - Level: 3
+    Area: 1
+  - Level: 4
+    Area: 1
+  - Level: 5
+    Area: 2
+  - Level: 6
+    Area: 2
+  - Level: 7
+    Area: 2
+  - Level: 8
+    Area: 2
+  - Level: 9
+    Area: 3
+  - Level: 10
+    Area: 3
+  Cooldown: 60000
+  Duration1: 30000
+  Duration2:
+  - Level: 1
+    Time: 30000
+  - Level: 2
+    Time: 60000
+  - Level: 3
+    Time: 90000
+  - Level: 4
+    Time: 120000
+  - Level: 5
+    Time: 150000
+  - Level: 6
+    Time: 180000
+  - Level: 7
+    Time: 210000
+  - Level: 8
+    Time: 240000
+  - Level: 9
+    Time: 270000
+  - Level: 10
+    Time: 300000
+  Requires:
+    SpCost: 150
+    ApCost: 150
+  Status: Rush_Quake2
+- Id: 6506
+  Name: MT_RUSH_STRIKE
+  Description: Rush Strike
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+  Range: 7
+  Hit: Multi_Hit
+  HitCount: 7
+  Element: Weapon
+  GiveAp: 2
+  AfterCastActDelay: 1000
+  SplashArea:
+  - Level: 1
+    Area: 1
+  - Level: 2
+    Area: 2
+  - Level: 3
+    Area: 2
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 3
+  Cooldown:
+  - Level: 1
+    Time: 2000
+  - Level: 2
+    Time: 1750
+  - Level: 3
+    Time: 1500
+  - Level: 4
+    Time: 1250
+  - Level: 5
+    Time: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 85
+    - Level: 2
+      Amount: 80
+    - Level: 3
+      Amount: 75
+    - Level: 4
+      Amount: 70
+    - Level: 5
+      Amount: 65
+    Weapon:
+      2hAxe: true
+- Id: 6002
+  Name: MT_SPARK_BLASTER
+  Description: Spark Blaster
+  MaxLevel: 10
+  Type: Weapon
+  TargetType: Attack
+  DamageFlags:
+    Splash: true
+    IgnoreDefense: true
+  Flags:
+    AllowOnMado: true
+  Range: 9
+  Hit: Multi_Hit
+  HitCount: 2
+  GiveAp: 2
+  Element: Weapon
+  SplashArea:
+  - Level: 1
+    Area: 3
+  - Level: 2
+    Area: 3
+  - Level: 3
+    Area: 3
+  - Level: 4
+    Area: 3
+  - Level: 5
+    Area: 3
+  - Level: 6
+    Area: 4
+  - Level: 7
+    Area: 4
+  - Level: 8
+    Area: 4
+  - Level: 9
+    Area: 4
+  - Level: 10
+    Area: 4
+  CastTime: 1500
+  FixedCastTime: 500
+  AfterCastActDelay: 250
+  Cooldown: 500
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 48
+    - Level: 2
+      Amount: 52
+    - Level: 3
+      Amount: 56
+    - Level: 4
+      Amount: 60
+    - Level: 5
+      Amount: 64
+    - Level: 6
+      Amount: 68
+    - Level: 7
+      Amount: 72
+    - Level: 8
+      Amount: 76
+    - Level: 9
+      Amount: 80
+    - Level: 10
+      Amount: 84
+    State: Mado
+- Id: 5302
+  Name: MT_SUMMON_ABR_BATTLE_WARIOR
+  Description: ABR Battle Warior
+  MaxLevel: 4
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  ActiveInstance: 1
+  GiveAp: 20
+  CastTime: 1000
+  Duration1:
+  - Level: 1
+    Time: 120000
+  - Level: 2
+    Time: 180000
+  - Level: 3
+    Time: 240000
+  - Level: 4
+    Time: 300000
+  Cooldown: 30000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 40
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 60
+    ItemCost:
+    - Item: Auto_Battle_Capsule
+      Amount: 1
+  Status: Abr_Battle_Warior
+- Id: 5303
+  Name: MT_SUMMON_ABR_DUAL_CANNON
+  Description: ABR Dual Cannon
+  MaxLevel: 4
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  ActiveInstance: 1
+  GiveAp: 20
+  CastTime: 1000
+  Duration1:
+  - Level: 1
+    Time: 120000
+  - Level: 2
+    Time: 180000
+  - Level: 3
+    Time: 240000
+  - Level: 4
+    Time: 300000
+  Cooldown: 30000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 40
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 60
+    ItemCost:
+    - Item: Auto_Battle_Capsule
+      Amount: 1
+  Status: Abr_Dual_Cannon
+- Id: 5305
+  Name: MT_SUMMON_ABR_INFINITY
+  Description: ABR Infinity
+  MaxLevel: 4
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  ActiveInstance: 1
+  CastTime: 1000
+  Duration1:
+  - Level: 1
+    Time: 120000
+  - Level: 2
+    Time: 180000
+  - Level: 3
+    Time: 240000
+  - Level: 4
+    Time: 300000
+  Cooldown: 60000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 40
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 60
+    ApCost: 200
+    ItemCost:
+    - Item: Auto_Battle_Capsule
+      Amount: 5
+  Status: Abr_Infinity
+- Id: 5304
+  Name: MT_SUMMON_ABR_MOTHER_NET
+  Description: ABR Mother Net
+  MaxLevel: 4
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Flags:
+    AllowOnMado: true
+  Hit: Single
+  HitCount: 1
+  ActiveInstance: 1
+  GiveAp: 20
+  CastTime: 1000
+  Duration1:
+  - Level: 1
+    Time: 120000
+  - Level: 2
+    Time: 180000
+  - Level: 3
+    Time: 240000
+  - Level: 4
+    Time: 300000
+  Cooldown: 30000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 30
+    - Level: 2
+      Amount: 40
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 60
+    ItemCost:
+    - Item: Auto_Battle_Capsule
+      Amount: 1
+  Status: Abr_Mother_Net
+- Id: 6003
+  Name: MT_TRIPLE_LASER
+  Description: Triple Laser
+  MaxLevel: 5
+  Type: Weapon
+  TargetType: Attack
+  Flags:
+    AllowOnMado: true
+  DamageFlags:
+    Critical: true
+  Range: 11
+  Hit: Multi_Hit
+  HitCount: 3
+  Element: Weapon
+  CastTime: 1000
+  FixedCastTime: 500
+  AfterCastActDelay: 250
+  Cooldown: 350
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 40
+    - Level: 2
+      Amount: 45
+    - Level: 3
+      Amount: 50
+    - Level: 4
+      Amount: 55
+    - Level: 5
+      Amount: 60
+    State: Mado
+- Id: 5300
+  Name: MT_TWOAXEDEF
+  Description: Two Hand Axe Def
+  MaxLevel: 10

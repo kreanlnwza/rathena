@@ -1,0 +1,141 @@
+Header:
+  Type: SKILL_DB
+  Version: 4
+Body:
+- Id: 361
+  Name: HP_ASSUMPTIO
+  Description: Assumptio
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  SplashArea: 1
+  CastTime:
+  - Level: 1
+    Time: 800
+  - Level: 2
+    Time: 1200
+  - Level: 3
+    Time: 1600
+  - Level: 4
+    Time: 2000
+  - Level: 5
+    Time: 2400
+  AfterCastActDelay: 500
+  Duration1:
+  - Level: 1
+    Time: 20000
+  - Level: 2
+    Time: 40000
+  - Level: 3
+    Time: 60000
+  - Level: 4
+    Time: 80000
+  - Level: 5
+    Time: 100000
+  FixedCastTime:
+  - Level: 1
+    Time: 200
+  - Level: 2
+    Time: 300
+  - Level: 3
+    Time: 400
+  - Level: 4
+    Time: 500
+  - Level: 5
+    Time: 600
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 20
+    - Level: 2
+      Amount: 30
+    - Level: 3
+      Amount: 40
+    - Level: 4
+      Amount: 50
+    - Level: 5
+      Amount: 60
+  Status: Assumptio
+- Id: 362
+  Name: HP_BASILICA
+  Description: Basilica
+  MaxLevel: 5
+  Type: Magic
+  TargetType: Self
+  DamageFlags:
+    NoDamage: true
+  Hit: Single
+  HitCount: 1
+  CastTime: 3000
+  AfterCastActDelay: 1000
+  Duration1:
+  - Level: 1
+    Time: 60000
+  - Level: 2
+    Time: 90000
+  - Level: 3
+    Time: 120000
+  - Level: 4
+    Time: 150000
+  - Level: 5
+    Time: 180000
+  Cooldown: 30000
+  FixedCastTime: 1000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 40
+    - Level: 2
+      Amount: 50
+    - Level: 3
+      Amount: 60
+    - Level: 4
+      Amount: 70
+    - Level: 5
+      Amount: 80
+  Status: Basilica
+- Id: 481
+  Name: HP_MANARECHARGE
+  Description: Mana Recharge
+  MaxLevel: 5
+- Id: 363
+  Name: HP_MEDITATIO
+  Description: Meditatio
+  MaxLevel: 10
+  Type: Magic
+- Id: 71
+  Name: PR_SLOWPOISON
+  Description: Slow Poison
+  MaxLevel: 4
+  Type: Magic
+  TargetType: Support
+  DamageFlags:
+    NoDamage: true
+  Range: 9
+  Hit: Single
+  HitCount: 1
+  Duration1:
+  - Level: 1
+    Time: 10000
+  - Level: 2
+    Time: 20000
+  - Level: 3
+    Time: 30000
+  - Level: 4
+    Time: 40000
+  Requires:
+    SpCost:
+    - Level: 1
+      Amount: 6
+    - Level: 2
+      Amount: 8
+    - Level: 3
+      Amount: 10
+    - Level: 4
+      Amount: 12
+  Status: SlowPoison
