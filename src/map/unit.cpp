@@ -697,6 +697,9 @@ static TIMER_FUNC(unit_walktoxy_timer)
 					return 0; // Warped
 			} else
 				md->areanpc_id = 0;
+			// MVP Warp Teleport System: Check if MVP is near a warp NPC
+			if( mob_mvp_warp_check(md, tick) )
+				return 0; // Warped
 			break;
 		case BL_NPC:
 			if (nd->is_invisible)

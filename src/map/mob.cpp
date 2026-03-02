@@ -145,6 +145,57 @@ bool mob_is_spotted(mob_data *md) {
 }
 
 /**
+ * MVP Warp Teleport System
+ * Checks if an MVP is near a warp NPC and teleports it to a random location
+ * @param md: Monster to check
+ * @param tick: Current tick
+ * @return Returns true if the MVP was teleported, false otherwise
+ */
+bool mob_mvp_warp_check(mob_data *md, t_tick tick) {
+	nullpo_retr(false, md);
+
+	// Check if this is an MVP
+	if (md->get_bosstype() != BOSSTYPE_MVP)
+		return false;
+
+	// Check cooldown
+	if (DIFF_TICK(tick, md->mvp_warp_last_time) < MVP_WARP_COOLDOWN)
+		return false;
+
+	// Check for nearby warp NPCs
+	struct map_data *mapdata = map_getmapdata(md->m);
+	if (mapdata == nullptr)
+		return false;
+
+	for (int32 i = 0; i < mapdata->npc_num_area; i++) {
+		npc_data *nd = mapdata->npc[i];
+
+		// Skip invisible NPCs
+		if (nd->is_invisible || nd->sc.option & OPTION_CLOAK)
+			continue;
+
+		// Only check warp NPCs
+		if (nd->subtype != NPCTYPE_WARP)
+			continue;
+
+		// Calculate distance to warp NPC
+		int32 dx = abs(md->x - nd->x);
+		int32 dy = abs(md->y - nd->y);
+
+		// Check if within range
+		if (dx <= MVP_WARP_RANGE && dy <= MVP_WARP_RANGE) {
+			// Teleport to random location on same map
+			if (unit_warp(md, md->m, -1, -1, CLR_TELEPORT) == 0) {
+				md->mvp_warp_last_time = tick;
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
+/**
  * Tomb spawn time calculations
  * @param nd: NPC data
  */
@@ -1193,6 +1244,7 @@ int32 mob_spawn (mob_data *md)
 	md->last_canmove = tick;
 	md->last_skillcheck = tick;
 	md->trickcasting = 0;
+	md->mvp_warp_last_time = 0;
 
 	for (i = 0; i < MAX_MOBSKILL; i++)
 		md->skilldelay[i] = 0;
