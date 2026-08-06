@@ -2815,7 +2815,7 @@ void mob_damage(mob_data *md, block_list *src, int32 damage)
  * @param factor: factor which is applied to all multiplicative bonuses and upper bound caps
  * @return Modified drop rate
  */
-int32 mob_getdroprate(block_list *src, std::shared_ptr<s_mob_db> mob, int32 base_rate, int32 drop_modifier, mob_data* md, int32 factor)
+int32 mob_getdroprate(block_list *src, std::shared_ptr<s_mob_db> mob, int32 base_rate, int32 drop_modifier, mob_data* md, int32 factor, item_types item_type)
 {
 	int32 drop_rate = base_rate;
 
@@ -2883,7 +2883,9 @@ int32 mob_getdroprate(block_list *src, std::shared_ptr<s_mob_db> mob, int32 base
 		drop_rate = max( drop_rate, 0 );
 	}else{
 		// If not - cap to 0.01% or 0.001% drop rate - as on official servers
-		drop_rate = max( drop_rate, 1 );
+		// For cards (IT_CARD), allow drop rate to go as low as 0.0001% (0 in integer math)
+		int32 min_rate = (item_type == IT_CARD) ? 0 : 1;
+		drop_rate = max( drop_rate, min_rate );
 	}
 
 	return drop_rate;
@@ -3329,7 +3331,7 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 			if (it == nullptr)
 				continue;
 
-			drop_rate = mob_getdroprate(src, md->db, entry->rate, drop_modifier, md);
+			drop_rate = mob_getdroprate(src, md->db, entry->rate, drop_modifier, md, 1, it->type);
 
 			// attempt to drop the item
 			if (rnd() % 10000 >= drop_rate)
@@ -3385,7 +3387,9 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 				uint32 final_rate;
 
 				if ( battle_config.enable_bonus_map_drops ) {
-					final_rate = mob_getdroprate(first_sd, md->db, it.second->rate, drop_modifier, md, 10);
+					std::shared_ptr<item_data> item_data = item_db.find(it.second->nameid);
+					item_types item_type = (item_data != nullptr) ? item_data->type : IT_MAX;
+					final_rate = mob_getdroprate(first_sd, md->db, it.second->rate, drop_modifier, md, 10, item_type);
 				} else {
 					final_rate = it.second->rate;
 				}
@@ -3406,7 +3410,9 @@ int32 mob_dead(mob_data *md, block_list *src, int32 type)
 					uint32 final_rate;
 
 					if ( battle_config.enable_bonus_map_drops ) {
-						final_rate = mob_getdroprate(first_sd, md->db, it.second->rate, drop_modifier, md, 10);
+						std::shared_ptr<item_data> item_data = item_db.find(it.second->nameid);
+						item_types item_type = (item_data != nullptr) ? item_data->type : IT_MAX;
+						final_rate = mob_getdroprate(first_sd, md->db, it.second->rate, drop_modifier, md, 10, item_type);
 					} else {
 						final_rate = it.second->rate;
 					}
@@ -4916,7 +4922,11 @@ bool MobDatabase::parseDropNode( std::string nodeName, const ryml::NodeRef& node
 		}
 
 		drop->nameid = item->nameid;
-		drop->rate = rate;
+		// For cards (IT_CARD), fix drop rate to 0.0001% (rate = 0)
+		if (item->type == IT_CARD)
+			drop->rate = 0;
+		else
+			drop->rate = rate;
 		drop->steal_protected = steal;
 		drop->randomopt_group = group;
 
